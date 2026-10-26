@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_3ip2b"]
 [ext_resource type="Texture2D" uid="uid://cqte624vc4al" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tilesets/research_lab_tileset_4x.png" id="2_qjypl"]
+[ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scenes/sink.gd" id="3_qjypl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_qjypl")
@@ -586,6 +587,20 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/1 = SubResource("TileSetAtlasSource_h5im6")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qjypl"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eketx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0hoth"]
+normal = Vector2(0, 1)
+distance = 128.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ip2b"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ip2b"]
+
 [node name="Node2D" type="Node2D" unique_id=1735809296]
 
 [node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_3ip2b")]
@@ -603,5 +618,55 @@ tile_map_data = PackedByteArray("AAD///3/AQAFAAQAAAABAP3/AQAFAAQAAAACAP3/AQAFAAQ
 tile_set = SubResource("TileSet_ntw1d")
 
 [node name="Furniture" type="TileMapLayer" parent="Background" unique_id=1184668823]
-tile_map_data = PackedByteArray("AAD///3/AQAFAAQAAAABAP3/AQAFAAQAAAACAP3/AQABABAAAAADAP3/AQAIAA4AAAAEAP3/AQAEAAQAAAD///z/AQACAAIAAAAAAPz/AQAEAAIAAAABAPz/AQACAAIAAAACAPz/AQACAAIAAAADAPz/AQACAAIAAAAEAPz/AQACAAIAAAAAAP3/AQAFAAQAAAD///v/AQAOAAIAAAAAAPv/AQAPAAIAAAABAPv/AQANAAIAAAACAPv/AQAOAAIAAAADAPv/AQANAAIAAAAEAPv/AQANAAIAAAD+//v/AQANAAIAAAD+//z/AQANAAIAAAD+//3/AQAPAAIAAAD+//7/AQAPAAIAAAD+////AQAOAAIAAAD+/wAAAQAOAAIAAAD///7/AQAEAAUAAAAAAP7/AQADAAUAAAABAP7/AQAEAAUAAAABAP//AQAEAAUAAAACAP//AQAEAAUAAAADAP//AQADAAUAAAAEAP//AQAFAAUAAAAEAAAAAQADAAUAAAACAP7/AQABABEAAAADAP7/AQAIAA8AAAAEAP7/AQADAAUAAAADAAAAAQAEAAUAAAACAAAAAQAFAAUAAAABAAAAAQAFAAUAAAAAAAAAAQAEAAUAAAD//wAAAQAEAAUAAAD/////AQAFAAUAAAAAAP//AQAFAAUAAAAFAPv/AQAOAAIAAAAFAPz/AQAPAAIAAAAFAP3/AQAOAAIAAAAFAP7/AQAOAAIAAAAFAP//AQAOAAIAAAAFAAAAAQAOAAIAAAD+/wEAAQAOAAIAAAD//wEAAQANAAIAAAAAAAEAAQAOAAIAAAABAAEAAQANAAIAAAACAAEAAQAPAAIAAAADAAEAAQAPAAIAAAAEAAEAAQANAAIAAAAFAAEAAQAPAAIAAAA=")
+tile_map_data = PackedByteArray("AAD///3/AQAFAAQAAAABAP3/AQAFAAQAAAACAP3/AQABABAAAAADAP3/AQAIAA4AAAAEAP3/AQAEAAQAAAD///z/AQAAADEAAAAAAPz/AQABADEAAAABAPz/AQACAAIAAAACAPz/AQAEADIAAAADAPz/AQAFADIAAAAEAPz/AQACAAIAAAAAAP3/AQAFAAQAAAD///v/AQAOAAIAAAAAAPv/AQAPAAIAAAABAPv/AQANAAIAAAACAPv/AQAOAAIAAAADAPv/AQANAAIAAAAEAPv/AQANAAIAAAD+//v/AQANAAIAAAD+//z/AQANAAIAAAD+//3/AQAPAAIAAAD+//7/AQAPAAIAAAD+////AQAOAAIAAAD+/wAAAQAOAAIAAAD///7/AQAEAAUAAAAAAP7/AQADAAUAAAABAP7/AQAEAAUAAAABAP//AQAEAAUAAAACAP//AQAEAAUAAAADAP//AQADAAUAAAAEAP//AQAFAAUAAAAEAAAAAQADAAUAAAACAP7/AQABABEAAAADAP7/AQAIAA8AAAAEAP7/AQADAAUAAAADAAAAAQAEAAUAAAACAAAAAQAFAAUAAAABAAAAAQAFAAUAAAAAAAAAAQAEAAUAAAD//wAAAQAEAAUAAAD/////AQAFAAUAAAAAAP//AQAFAAUAAAAFAPv/AQAOAAIAAAAFAPz/AQAPAAIAAAAFAP3/AQAOAAIAAAAFAP7/AQAOAAIAAAAFAP//AQAOAAIAAAAFAAAAAQAOAAIAAAD+/wEAAQAOAAIAAAD//wEAAQANAAIAAAAAAAEAAQAOAAIAAAABAAEAAQANAAIAAAACAAEAAQAPAAIAAAADAAEAAQAPAAIAAAAEAAEAAQANAAIAAAAFAAEAAQAPAAIAAAA=")
 tile_set = SubResource("TileSet_ntw1d")
+
+[node name="World Borders" type="StaticBody2D" parent="." unique_id=2128009735]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Borders" unique_id=770375888]
+position = Vector2(320, -64)
+shape = SubResource("WorldBoundaryShape2D_qjypl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Borders" unique_id=166447373]
+position = Vector2(128, 64)
+shape = SubResource("WorldBoundaryShape2D_eketx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Borders" unique_id=67818361]
+position = Vector2(128, -256)
+shape = SubResource("WorldBoundaryShape2D_0hoth")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Borders" unique_id=967769134]
+position = Vector2(-64, -64)
+shape = SubResource("WorldBoundaryShape2D_3ip2b")
+
+[node name="Sink" type="Node2D" parent="." unique_id=382233072]
+script = ExtResource("3_qjypl")
+
+[node name="Area2D" type="Area2D" parent="Sink" unique_id=266311555]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sink/Area2D" unique_id=1595971687]
+position = Vector2(160, -107)
+scale = Vector2(1.85, 1.85)
+shape = SubResource("RectangleShape2D_3ip2b")
+
+[node name="Distillation" type="Node2D" parent="." unique_id=529588658]
+
+[node name="Area2D" type="Area2D" parent="Distillation" unique_id=1012292691]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Distillation/Area2D" unique_id=1910599189]
+position = Vector2(225.00002, -108)
+scale = Vector2(1.85, 1.85)
+shape = SubResource("RectangleShape2D_3ip2b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=157632460]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1363440266]
+visible = false
+offset_left = 462.0
+offset_top = 577.0
+offset_right = 630.0
+offset_bottom = 600.0
+text = "[PROMPT GOES HERE]"
+
+[connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
