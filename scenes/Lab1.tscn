@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_3ip2b"]
 [ext_resource type="Texture2D" uid="uid://cqte624vc4al" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tilesets/research_lab_tileset_4x.png" id="2_qjypl"]
 [ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scenes/sink.gd" id="3_qjypl"]
+[ext_resource type="Script" uid="uid://5w0uav6j7g0v" path="res://scenes/distillation.gd" id="4_eketx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_qjypl")
@@ -600,6 +601,7 @@ distance = 128.0
 normal = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ip2b"]
+size = Vector2(8.108107, 20)
 
 [node name="Node2D" type="Node2D" unique_id=1735809296]
 
@@ -650,11 +652,12 @@ scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_3ip2b")
 
 [node name="Distillation" type="Node2D" parent="." unique_id=529588658]
+script = ExtResource("4_eketx")
 
 [node name="Area2D" type="Area2D" parent="Distillation" unique_id=1012292691]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Distillation/Area2D" unique_id=1910599189]
-position = Vector2(225.00002, -108)
+position = Vector2(227.5, -108)
 scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_3ip2b")
 
@@ -670,3 +673,5 @@ text = "[PROMPT GOES HERE]"
 
 [connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_exited"]
