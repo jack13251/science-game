@@ -1,0 +1,7082 @@
+{
+  "pack": "Science Lab Tileset",
+  "style": 1,
+  "version": "1.0",
+  "tile_size": 16,
+  "scales": [
+    1,
+    2,
+    4
+  ],
+  "tileset": {
+    "1x": "tilesets/school_science_tileset_1x.png",
+    "2x": "tilesets/school_science_tileset_2x.png",
+    "4x": "tilesets/school_science_tileset_4x.png"
+  },
+  "columns": 16,
+  "layers": [
+    "Floor",
+    "FloorTrim",
+    "Shadows",
+    "Decals",
+    "Walls",
+    "WallDecor",
+    "Furniture",
+    "Top"
+  ],
+  "neighbor_order": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "animations": {
+    "bunsen_burner": {
+      "label": "Bunsen burner",
+      "frames": [
+        "bunsen_burner_off",
+        "bunsen_burner_flame1",
+        "bunsen_burner_flame2",
+        "bunsen_burner_flame3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        3,
+        3
+      ],
+      "states": {
+        "off": [
+          0
+        ],
+        "burning": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "bubbling_flask": {
+      "label": "Bubbling flask on a hot plate",
+      "frames": [
+        "bubbling_flask_f0",
+        "bubbling_flask_f1",
+        "bubbling_flask_f2",
+        "bubbling_flask_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "boiling": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "distillation_rig": {
+      "label": "Distillation rig",
+      "frames": [
+        "distillation_rig_f0",
+        "distillation_rig_f1",
+        "distillation_rig_f2",
+        "distillation_rig_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "distilling": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "centrifuge": {
+      "label": "Centrifuge",
+      "frames": [
+        "centrifuge_idle",
+        "centrifuge_spin1",
+        "centrifuge_spin2",
+        "centrifuge_spin3",
+        "centrifuge_done"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "states": {
+        "idle": [
+          0
+        ],
+        "spinning": [
+          1,
+          2,
+          3
+        ],
+        "done": [
+          4
+        ]
+      }
+    },
+    "lab_sink": {
+      "label": "Lab sink",
+      "frames": [
+        "lab_sink_still",
+        "lab_sink_drip1",
+        "lab_sink_drip2",
+        "lab_sink_splash"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "still": [
+          0
+        ],
+        "drip": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "fume_hood": {
+      "label": "Fume hood",
+      "frames": [
+        "fume_hood_f0",
+        "fume_hood_f1",
+        "fume_hood_f2",
+        "fume_hood_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "venting": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "specimen_tank": {
+      "label": "Specimen tank",
+      "frames": [
+        "specimen_tank_f0",
+        "specimen_tank_f1",
+        "specimen_tank_f2",
+        "specimen_tank_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "states": {
+        "drifting": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "containment_pod": {
+      "label": "Containment pod",
+      "frames": [
+        "containment_pod_calm1",
+        "containment_pod_calm2",
+        "containment_pod_calm3",
+        "containment_pod_calm4",
+        "containment_pod_alert",
+        "containment_pod_alert2"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        4,
+        4,
+        5,
+        5,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "states": {
+        "calm": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "alert": [
+          4,
+          5
+        ]
+      }
+    },
+    "decon_shower": {
+      "label": "Decontamination shower",
+      "frames": [
+        "decon_shower_off",
+        "decon_shower_spray1",
+        "decon_shower_spray2",
+        "decon_shower_spray3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ],
+      "states": {
+        "off": [
+          0
+        ],
+        "spraying": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "tesla_coil": {
+      "label": "Tesla coil",
+      "frames": [
+        "tesla_coil_idle",
+        "tesla_coil_arc1",
+        "tesla_coil_arc2",
+        "tesla_coil_arc3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        1,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        2,
+        3
+      ],
+      "states": {
+        "idle": [
+          0
+        ],
+        "arcing": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "capacitor_bank": {
+      "label": "Capacitor bank",
+      "frames": [
+        "capacitor_bank_charge1",
+        "capacitor_bank_charge2",
+        "capacitor_bank_charge3",
+        "capacitor_bank_charge4",
+        "capacitor_bank_full",
+        "capacitor_bank_discharge"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        4,
+        5,
+        0
+      ],
+      "states": {
+        "charging": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "charged": [
+          4
+        ],
+        "discharge": [
+          5
+        ]
+      }
+    },
+    "console_scope": {
+      "label": "Oscilloscope console",
+      "frames": [
+        "console_scope_f0",
+        "console_scope_f1",
+        "console_scope_f2",
+        "console_scope_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "states": {
+        "tracing": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "console_buttons": {
+      "label": "Blinking control panel",
+      "frames": [
+        "console_buttons_f0",
+        "console_buttons_f1",
+        "console_buttons_f2",
+        "console_buttons_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "states": {
+        "running": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "particle_ring": {
+      "label": "Particle ring",
+      "frames": [
+        "particle_ring_f0",
+        "particle_ring_f1",
+        "particle_ring_f2",
+        "particle_ring_f3",
+        "particle_ring_f4",
+        "particle_ring_f5",
+        "particle_ring_f6",
+        "particle_ring_f7"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "states": {
+        "running": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    },
+    "research_pc": {
+      "label": "Research computer",
+      "frames": [
+        "research_pc_f0",
+        "research_pc_f1",
+        "research_pc_f2",
+        "research_pc_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "states": {
+        "modelling": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "server_rack": {
+      "label": "Server rack",
+      "frames": [
+        "server_rack_f0",
+        "server_rack_f1",
+        "server_rack_f2",
+        "server_rack_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "running": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "airlock_door": {
+      "label": "Airlock door",
+      "frames": [
+        "airlock_door_closed",
+        "airlock_door_opening",
+        "airlock_door_wide",
+        "airlock_door_open"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "states": {
+        "closed": [
+          0
+        ],
+        "opening": [
+          1,
+          2
+        ],
+        "open": [
+          3
+        ],
+        "closing": [
+          2,
+          1
+        ]
+      }
+    },
+    "keycard_door": {
+      "label": "Keycard door",
+      "frames": [
+        "keycard_door_locked",
+        "keycard_door_granted",
+        "keycard_door_opening",
+        "keycard_door_open"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "states": {
+        "locked": [
+          0
+        ],
+        "granted": [
+          1
+        ],
+        "opening": [
+          2
+        ],
+        "open": [
+          3
+        ],
+        "closing": [
+          2
+        ]
+      }
+    },
+    "alarm_beacon": {
+      "label": "Rotating alarm beacon",
+      "frames": [
+        "alarm_beacon_r0",
+        "alarm_beacon_r1",
+        "alarm_beacon_r2",
+        "alarm_beacon_off"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "states": {
+        "off": [
+          3
+        ],
+        "rotating": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "tube_light": {
+      "label": "Fluorescent wall light",
+      "frames": [
+        "tube_light_on",
+        "tube_light_dim",
+        "tube_light_off"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "states": {
+        "on": [
+          0
+        ],
+        "flicker": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "off": [
+          2
+        ]
+      }
+    },
+    "wall_monitor": {
+      "label": "Wall data monitor",
+      "frames": [
+        "wall_monitor_f0",
+        "wall_monitor_f1",
+        "wall_monitor_f2",
+        "wall_monitor_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "states": {
+        "live": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "sample_fridge": {
+      "label": "Sample fridge",
+      "frames": [
+        "sample_fridge_closed",
+        "sample_fridge_ajar",
+        "sample_fridge_open",
+        "sample_fridge_mist"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        1,
+        1,
+        0,
+        0
+      ],
+      "states": {
+        "closed": [
+          0
+        ],
+        "ajar": [
+          1
+        ],
+        "open": [
+          2,
+          3
+        ]
+      }
+    },
+    "hologram_projector": {
+      "label": "Hologram projector",
+      "frames": [
+        "hologram_projector_f0",
+        "hologram_projector_f1",
+        "hologram_projector_f2",
+        "hologram_projector_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "projecting": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "plasma_globe": {
+      "label": "Plasma globe",
+      "frames": [
+        "plasma_globe_f0",
+        "plasma_globe_f1",
+        "plasma_globe_f2",
+        "plasma_globe_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "crackling": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "mouse_cage": {
+      "label": "Lab mouse cage",
+      "frames": [
+        "mouse_cage_f0",
+        "mouse_cage_f1",
+        "mouse_cage_f2",
+        "mouse_cage_f3"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "states": {
+        "running": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "robot_arm": {
+      "label": "Robotic sample arm",
+      "frames": [
+        "robot_arm_pick",
+        "robot_arm_lift",
+        "robot_arm_swing",
+        "robot_arm_place"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "states": {
+        "working": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "wall_clock": {
+      "label": "Wall clock",
+      "frames": [
+        "wall_clock_s0",
+        "wall_clock_s1",
+        "wall_clock_s2",
+        "wall_clock_s3",
+        "wall_clock_s4",
+        "wall_clock_s5",
+        "wall_clock_s6",
+        "wall_clock_s7"
+      ],
+      "fps": 8,
+      "loop": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "states": {
+        "ticking": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    }
+  },
+  "tiles": [
+    {
+      "id": 0,
+      "name": "lab_wall_none",
+      "category": "walls",
+      "x": 0,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_none.png",
+      "connected": [],
+      "face": true
+    },
+    {
+      "id": 1,
+      "name": "lab_wall_N",
+      "category": "walls",
+      "x": 16,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N.png",
+      "connected": [
+        "N"
+      ],
+      "face": true
+    },
+    {
+      "id": 2,
+      "name": "lab_wall_E",
+      "category": "walls",
+      "x": 32,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E.png",
+      "connected": [
+        "E"
+      ],
+      "face": true
+    },
+    {
+      "id": 3,
+      "name": "lab_wall_N_E",
+      "category": "walls",
+      "x": 48,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E.png",
+      "connected": [
+        "N",
+        "E"
+      ],
+      "face": true
+    },
+    {
+      "id": 4,
+      "name": "lab_wall_N_E_NE",
+      "category": "walls",
+      "x": 64,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_NE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E"
+      ],
+      "face": true
+    },
+    {
+      "id": 5,
+      "name": "lab_wall_S",
+      "category": "walls",
+      "x": 80,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_S.png",
+      "connected": [
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 6,
+      "name": "lab_wall_N_S",
+      "category": "walls",
+      "x": 96,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_S.png",
+      "connected": [
+        "N",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 7,
+      "name": "lab_wall_E_S",
+      "category": "walls",
+      "x": 112,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S.png",
+      "connected": [
+        "E",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 8,
+      "name": "lab_wall_N_E_S",
+      "category": "walls",
+      "x": 128,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S.png",
+      "connected": [
+        "N",
+        "E",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 9,
+      "name": "lab_wall_N_E_S_NE",
+      "category": "walls",
+      "x": 144,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_NE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 10,
+      "name": "lab_wall_E_S_SE",
+      "category": "walls",
+      "x": 160,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S_SE.png",
+      "connected": [
+        "E",
+        "SE",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 11,
+      "name": "lab_wall_N_E_S_SE",
+      "category": "walls",
+      "x": 176,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_SE.png",
+      "connected": [
+        "N",
+        "E",
+        "SE",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 12,
+      "name": "lab_wall_N_E_S_NE_SE",
+      "category": "walls",
+      "x": 192,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_NE_SE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S"
+      ],
+      "face": false
+    },
+    {
+      "id": 13,
+      "name": "lab_wall_W",
+      "category": "walls",
+      "x": 208,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_W.png",
+      "connected": [
+        "W"
+      ],
+      "face": true
+    },
+    {
+      "id": 14,
+      "name": "lab_wall_N_W",
+      "category": "walls",
+      "x": 224,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_W.png",
+      "connected": [
+        "N",
+        "W"
+      ],
+      "face": true
+    },
+    {
+      "id": 15,
+      "name": "lab_wall_E_W",
+      "category": "walls",
+      "x": 240,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_W.png",
+      "connected": [
+        "E",
+        "W"
+      ],
+      "face": true
+    },
+    {
+      "id": 16,
+      "name": "lab_wall_N_E_W",
+      "category": "walls",
+      "x": 0,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W.png",
+      "connected": [
+        "N",
+        "E",
+        "W"
+      ],
+      "face": true
+    },
+    {
+      "id": 17,
+      "name": "lab_wall_N_E_W_NE",
+      "category": "walls",
+      "x": 16,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W_NE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "W"
+      ],
+      "face": true
+    },
+    {
+      "id": 18,
+      "name": "lab_wall_S_W",
+      "category": "walls",
+      "x": 32,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_S_W.png",
+      "connected": [
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 19,
+      "name": "lab_wall_N_S_W",
+      "category": "walls",
+      "x": 48,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_S_W.png",
+      "connected": [
+        "N",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 20,
+      "name": "lab_wall_E_S_W",
+      "category": "walls",
+      "x": 64,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S_W.png",
+      "connected": [
+        "E",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 21,
+      "name": "lab_wall_N_E_S_W",
+      "category": "walls",
+      "x": 80,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W.png",
+      "connected": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 22,
+      "name": "lab_wall_N_E_S_W_NE",
+      "category": "walls",
+      "x": 96,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 23,
+      "name": "lab_wall_E_S_W_SE",
+      "category": "walls",
+      "x": 112,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S_W_SE.png",
+      "connected": [
+        "E",
+        "SE",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 24,
+      "name": "lab_wall_N_E_S_W_SE",
+      "category": "walls",
+      "x": 128,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SE.png",
+      "connected": [
+        "N",
+        "E",
+        "SE",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 25,
+      "name": "lab_wall_N_E_S_W_NE_SE",
+      "category": "walls",
+      "x": 144,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_SE.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 26,
+      "name": "lab_wall_S_W_SW",
+      "category": "walls",
+      "x": 160,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_S_W_SW.png",
+      "connected": [
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 27,
+      "name": "lab_wall_N_S_W_SW",
+      "category": "walls",
+      "x": 176,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_S_W_SW.png",
+      "connected": [
+        "N",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 28,
+      "name": "lab_wall_E_S_W_SW",
+      "category": "walls",
+      "x": 192,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S_W_SW.png",
+      "connected": [
+        "E",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 29,
+      "name": "lab_wall_N_E_S_W_SW",
+      "category": "walls",
+      "x": 208,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SW.png",
+      "connected": [
+        "N",
+        "E",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 30,
+      "name": "lab_wall_N_E_S_W_NE_SW",
+      "category": "walls",
+      "x": 224,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_SW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 31,
+      "name": "lab_wall_E_S_W_SE_SW",
+      "category": "walls",
+      "x": 240,
+      "y": 16,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_E_S_W_SE_SW.png",
+      "connected": [
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 32,
+      "name": "lab_wall_N_E_S_W_SE_SW",
+      "category": "walls",
+      "x": 0,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SE_SW.png",
+      "connected": [
+        "N",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 33,
+      "name": "lab_wall_N_E_S_W_NE_SE_SW",
+      "category": "walls",
+      "x": 16,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_SE_SW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W"
+      ],
+      "face": false
+    },
+    {
+      "id": 34,
+      "name": "lab_wall_N_W_NW",
+      "category": "walls",
+      "x": 32,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_W_NW.png",
+      "connected": [
+        "N",
+        "W",
+        "NW"
+      ],
+      "face": true
+    },
+    {
+      "id": 35,
+      "name": "lab_wall_N_E_W_NW",
+      "category": "walls",
+      "x": 48,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W_NW.png",
+      "connected": [
+        "N",
+        "E",
+        "W",
+        "NW"
+      ],
+      "face": true
+    },
+    {
+      "id": 36,
+      "name": "lab_wall_N_E_W_NE_NW",
+      "category": "walls",
+      "x": 64,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W_NE_NW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "W",
+        "NW"
+      ],
+      "face": true
+    },
+    {
+      "id": 37,
+      "name": "lab_wall_N_S_W_NW",
+      "category": "walls",
+      "x": 80,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_S_W_NW.png",
+      "connected": [
+        "N",
+        "S",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 38,
+      "name": "lab_wall_N_E_S_W_NW",
+      "category": "walls",
+      "x": 96,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NW.png",
+      "connected": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 39,
+      "name": "lab_wall_N_E_S_W_NE_NW",
+      "category": "walls",
+      "x": 112,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_NW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "S",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 40,
+      "name": "lab_wall_N_E_S_W_SE_NW",
+      "category": "walls",
+      "x": 128,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SE_NW.png",
+      "connected": [
+        "N",
+        "E",
+        "SE",
+        "S",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 41,
+      "name": "lab_wall_N_E_S_W_NE_SE_NW",
+      "category": "walls",
+      "x": 144,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_SE_NW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 42,
+      "name": "lab_wall_N_S_W_SW_NW",
+      "category": "walls",
+      "x": 160,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_S_W_SW_NW.png",
+      "connected": [
+        "N",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 43,
+      "name": "lab_wall_N_E_S_W_SW_NW",
+      "category": "walls",
+      "x": 176,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SW_NW.png",
+      "connected": [
+        "N",
+        "E",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 44,
+      "name": "lab_wall_N_E_S_W_NE_SW_NW",
+      "category": "walls",
+      "x": 192,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_NE_SW_NW.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 45,
+      "name": "lab_wall_N_E_S_W_SE_SW_NW",
+      "category": "walls",
+      "x": 208,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_S_W_SE_SW_NW.png",
+      "connected": [
+        "N",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 46,
+      "name": "lab_wall_all",
+      "category": "walls",
+      "x": 224,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_all.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false
+    },
+    {
+      "id": 47,
+      "name": "lab_wall_all_alt1",
+      "category": "walls",
+      "x": 240,
+      "y": 32,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_all_alt1.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false,
+      "random_weight": 0.3
+    },
+    {
+      "id": 48,
+      "name": "lab_wall_all_alt2",
+      "category": "walls",
+      "x": 0,
+      "y": 48,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_all_alt2.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ],
+      "face": false,
+      "random_weight": 0.3
+    },
+    {
+      "id": 49,
+      "name": "lab_wall_N_E_W_NE_NW_alt1",
+      "category": "walls",
+      "x": 16,
+      "y": 48,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W_NE_NW_alt1.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "W",
+        "NW"
+      ],
+      "face": true,
+      "random_weight": 0.3
+    },
+    {
+      "id": 50,
+      "name": "lab_wall_N_E_W_NE_NW_alt2",
+      "category": "walls",
+      "x": 32,
+      "y": 48,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_N_E_W_NE_NW_alt2.png",
+      "connected": [
+        "N",
+        "NE",
+        "E",
+        "W",
+        "NW"
+      ],
+      "face": true,
+      "random_weight": 0.3
+    },
+    {
+      "id": 64,
+      "name": "lab_wall_lower",
+      "category": "walls",
+      "x": 0,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower.png",
+      "open_ends": []
+    },
+    {
+      "id": 65,
+      "name": "lab_wall_lower_end_W",
+      "category": "walls",
+      "x": 16,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower_end_W.png",
+      "open_ends": [
+        "W"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "lab_wall_lower_end_E",
+      "category": "walls",
+      "x": 32,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower_end_E.png",
+      "open_ends": [
+        "E"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "lab_wall_lower_single",
+      "category": "walls",
+      "x": 48,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower_single.png",
+      "open_ends": [
+        "W",
+        "E"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "lab_wall_lower_alt1",
+      "category": "walls",
+      "x": 64,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower_alt1.png",
+      "open_ends": [],
+      "random_weight": 0.3
+    },
+    {
+      "id": 69,
+      "name": "lab_wall_lower_alt2",
+      "category": "walls",
+      "x": 80,
+      "y": 64,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/walls/lab_wall_lower_alt2.png",
+      "open_ends": [],
+      "random_weight": 0.3
+    },
+    {
+      "id": 80,
+      "name": "carpet_01",
+      "category": "floors",
+      "x": 0,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/carpet_01.png",
+      "material": "carpet"
+    },
+    {
+      "id": 81,
+      "name": "carpet_02",
+      "category": "floors",
+      "x": 16,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/carpet_02.png",
+      "material": "carpet"
+    },
+    {
+      "id": 82,
+      "name": "carpet_stain",
+      "category": "floors",
+      "x": 32,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/carpet_stain.png",
+      "material": "carpet"
+    },
+    {
+      "id": 83,
+      "name": "vct_01",
+      "category": "floors",
+      "x": 48,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/vct_01.png",
+      "material": "vct"
+    },
+    {
+      "id": 84,
+      "name": "vct_02",
+      "category": "floors",
+      "x": 64,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/vct_02.png",
+      "material": "vct"
+    },
+    {
+      "id": 85,
+      "name": "vct_scuff",
+      "category": "floors",
+      "x": 80,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/vct_scuff.png",
+      "material": "vct"
+    },
+    {
+      "id": 86,
+      "name": "epoxy_01",
+      "category": "floors",
+      "x": 96,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/epoxy_01.png",
+      "material": "epoxy"
+    },
+    {
+      "id": 87,
+      "name": "epoxy_02",
+      "category": "floors",
+      "x": 112,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/epoxy_02.png",
+      "material": "epoxy"
+    },
+    {
+      "id": 88,
+      "name": "epoxy_stain",
+      "category": "floors",
+      "x": 128,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/epoxy_stain.png",
+      "material": "epoxy"
+    },
+    {
+      "id": 89,
+      "name": "plate_01",
+      "category": "floors",
+      "x": 144,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/plate_01.png",
+      "material": "plate"
+    },
+    {
+      "id": 90,
+      "name": "plate_02",
+      "category": "floors",
+      "x": 160,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/plate_02.png",
+      "material": "plate"
+    },
+    {
+      "id": 91,
+      "name": "raised_01",
+      "category": "floors",
+      "x": 176,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/raised_01.png",
+      "material": "raised"
+    },
+    {
+      "id": 92,
+      "name": "raised_02",
+      "category": "floors",
+      "x": 192,
+      "y": 80,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floors/raised_02.png",
+      "material": "raised"
+    },
+    {
+      "id": 96,
+      "name": "floor_trim_carpet_edge_N",
+      "category": "floor_trim",
+      "x": 0,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "floor_trim_carpet_edge_E",
+      "category": "floor_trim",
+      "x": 16,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_E.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "E"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "floor_trim_carpet_edge_N_E",
+      "category": "floor_trim",
+      "x": 32,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_E.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "floor_trim_carpet_edge_S",
+      "category": "floor_trim",
+      "x": 48,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_S.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "S"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "floor_trim_carpet_edge_N_S",
+      "category": "floor_trim",
+      "x": 64,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_S.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "floor_trim_carpet_edge_E_S",
+      "category": "floor_trim",
+      "x": 80,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_E_S.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "floor_trim_carpet_edge_N_E_S",
+      "category": "floor_trim",
+      "x": 96,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_E_S.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "floor_trim_carpet_edge_W",
+      "category": "floor_trim",
+      "x": 112,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "W"
+      ]
+    },
+    {
+      "id": 104,
+      "name": "floor_trim_carpet_edge_N_W",
+      "category": "floor_trim",
+      "x": 128,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "floor_trim_carpet_edge_E_W",
+      "category": "floor_trim",
+      "x": 144,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_E_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 106,
+      "name": "floor_trim_carpet_edge_N_E_W",
+      "category": "floor_trim",
+      "x": 160,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_E_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 107,
+      "name": "floor_trim_carpet_edge_S_W",
+      "category": "floor_trim",
+      "x": 176,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_S_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 108,
+      "name": "floor_trim_carpet_edge_N_S_W",
+      "category": "floor_trim",
+      "x": 192,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_S_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "floor_trim_carpet_edge_E_S_W",
+      "category": "floor_trim",
+      "x": 208,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_E_S_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 110,
+      "name": "floor_trim_carpet_edge_N_E_S_W",
+      "category": "floor_trim",
+      "x": 224,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_carpet_edge_N_E_S_W.png",
+      "trim_set": "carpet_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 111,
+      "name": "floor_trim_strip_N",
+      "category": "floor_trim",
+      "x": 240,
+      "y": 96,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N"
+      ]
+    },
+    {
+      "id": 112,
+      "name": "floor_trim_strip_E",
+      "category": "floor_trim",
+      "x": 0,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_E.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "E"
+      ]
+    },
+    {
+      "id": 113,
+      "name": "floor_trim_strip_N_E",
+      "category": "floor_trim",
+      "x": 16,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_E.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "id": 114,
+      "name": "floor_trim_strip_S",
+      "category": "floor_trim",
+      "x": 32,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_S.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "S"
+      ]
+    },
+    {
+      "id": 115,
+      "name": "floor_trim_strip_N_S",
+      "category": "floor_trim",
+      "x": 48,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_S.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "id": 116,
+      "name": "floor_trim_strip_E_S",
+      "category": "floor_trim",
+      "x": 64,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_E_S.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 117,
+      "name": "floor_trim_strip_N_E_S",
+      "category": "floor_trim",
+      "x": 80,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_E_S.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 118,
+      "name": "floor_trim_strip_W",
+      "category": "floor_trim",
+      "x": 96,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "W"
+      ]
+    },
+    {
+      "id": 119,
+      "name": "floor_trim_strip_N_W",
+      "category": "floor_trim",
+      "x": 112,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "id": 120,
+      "name": "floor_trim_strip_E_W",
+      "category": "floor_trim",
+      "x": 128,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_E_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "floor_trim_strip_N_E_W",
+      "category": "floor_trim",
+      "x": 144,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_E_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 122,
+      "name": "floor_trim_strip_S_W",
+      "category": "floor_trim",
+      "x": 160,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_S_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 123,
+      "name": "floor_trim_strip_N_S_W",
+      "category": "floor_trim",
+      "x": 176,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_S_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 124,
+      "name": "floor_trim_strip_E_S_W",
+      "category": "floor_trim",
+      "x": 192,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_E_S_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 125,
+      "name": "floor_trim_strip_N_E_S_W",
+      "category": "floor_trim",
+      "x": 208,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_strip_N_E_S_W.png",
+      "trim_set": "strip",
+      "trim_sides": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 126,
+      "name": "floor_trim_epoxy_cove_N",
+      "category": "floor_trim",
+      "x": 224,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "floor_trim_epoxy_cove_E",
+      "category": "floor_trim",
+      "x": 240,
+      "y": 112,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_E.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "E"
+      ]
+    },
+    {
+      "id": 128,
+      "name": "floor_trim_epoxy_cove_N_E",
+      "category": "floor_trim",
+      "x": 0,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_E.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "floor_trim_epoxy_cove_S",
+      "category": "floor_trim",
+      "x": 16,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_S.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "S"
+      ]
+    },
+    {
+      "id": 130,
+      "name": "floor_trim_epoxy_cove_N_S",
+      "category": "floor_trim",
+      "x": 32,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_S.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "id": 131,
+      "name": "floor_trim_epoxy_cove_E_S",
+      "category": "floor_trim",
+      "x": 48,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_E_S.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 132,
+      "name": "floor_trim_epoxy_cove_N_E_S",
+      "category": "floor_trim",
+      "x": 64,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_E_S.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 133,
+      "name": "floor_trim_epoxy_cove_W",
+      "category": "floor_trim",
+      "x": 80,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "W"
+      ]
+    },
+    {
+      "id": 134,
+      "name": "floor_trim_epoxy_cove_N_W",
+      "category": "floor_trim",
+      "x": 96,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "id": 135,
+      "name": "floor_trim_epoxy_cove_E_W",
+      "category": "floor_trim",
+      "x": 112,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_E_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 136,
+      "name": "floor_trim_epoxy_cove_N_E_W",
+      "category": "floor_trim",
+      "x": 128,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_E_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 137,
+      "name": "floor_trim_epoxy_cove_S_W",
+      "category": "floor_trim",
+      "x": 144,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_S_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 138,
+      "name": "floor_trim_epoxy_cove_N_S_W",
+      "category": "floor_trim",
+      "x": 160,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_S_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 139,
+      "name": "floor_trim_epoxy_cove_E_S_W",
+      "category": "floor_trim",
+      "x": 176,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_E_S_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 140,
+      "name": "floor_trim_epoxy_cove_N_E_S_W",
+      "category": "floor_trim",
+      "x": 192,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_epoxy_cove_N_E_S_W.png",
+      "trim_set": "epoxy_cove",
+      "trim_sides": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 141,
+      "name": "floor_trim_plate_edge_N",
+      "category": "floor_trim",
+      "x": 208,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N"
+      ]
+    },
+    {
+      "id": 142,
+      "name": "floor_trim_plate_edge_E",
+      "category": "floor_trim",
+      "x": 224,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_E.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "E"
+      ]
+    },
+    {
+      "id": 143,
+      "name": "floor_trim_plate_edge_N_E",
+      "category": "floor_trim",
+      "x": 240,
+      "y": 128,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_E.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "id": 144,
+      "name": "floor_trim_plate_edge_S",
+      "category": "floor_trim",
+      "x": 0,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_S.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "S"
+      ]
+    },
+    {
+      "id": 145,
+      "name": "floor_trim_plate_edge_N_S",
+      "category": "floor_trim",
+      "x": 16,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_S.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "id": 146,
+      "name": "floor_trim_plate_edge_E_S",
+      "category": "floor_trim",
+      "x": 32,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_E_S.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 147,
+      "name": "floor_trim_plate_edge_N_E_S",
+      "category": "floor_trim",
+      "x": 48,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_E_S.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 148,
+      "name": "floor_trim_plate_edge_W",
+      "category": "floor_trim",
+      "x": 64,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "W"
+      ]
+    },
+    {
+      "id": 149,
+      "name": "floor_trim_plate_edge_N_W",
+      "category": "floor_trim",
+      "x": 80,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "id": 150,
+      "name": "floor_trim_plate_edge_E_W",
+      "category": "floor_trim",
+      "x": 96,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_E_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 151,
+      "name": "floor_trim_plate_edge_N_E_W",
+      "category": "floor_trim",
+      "x": 112,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_E_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 152,
+      "name": "floor_trim_plate_edge_S_W",
+      "category": "floor_trim",
+      "x": 128,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_S_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 153,
+      "name": "floor_trim_plate_edge_N_S_W",
+      "category": "floor_trim",
+      "x": 144,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_S_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 154,
+      "name": "floor_trim_plate_edge_E_S_W",
+      "category": "floor_trim",
+      "x": 160,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_E_S_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 155,
+      "name": "floor_trim_plate_edge_N_E_S_W",
+      "category": "floor_trim",
+      "x": 176,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_plate_edge_N_E_S_W.png",
+      "trim_set": "plate_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 156,
+      "name": "floor_trim_raised_edge_N",
+      "category": "floor_trim",
+      "x": 192,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N"
+      ]
+    },
+    {
+      "id": 157,
+      "name": "floor_trim_raised_edge_E",
+      "category": "floor_trim",
+      "x": 208,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_E.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "E"
+      ]
+    },
+    {
+      "id": 158,
+      "name": "floor_trim_raised_edge_N_E",
+      "category": "floor_trim",
+      "x": 224,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_E.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "id": 159,
+      "name": "floor_trim_raised_edge_S",
+      "category": "floor_trim",
+      "x": 240,
+      "y": 144,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_S.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "S"
+      ]
+    },
+    {
+      "id": 160,
+      "name": "floor_trim_raised_edge_N_S",
+      "category": "floor_trim",
+      "x": 0,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_S.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "id": 161,
+      "name": "floor_trim_raised_edge_E_S",
+      "category": "floor_trim",
+      "x": 16,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_E_S.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 162,
+      "name": "floor_trim_raised_edge_N_E_S",
+      "category": "floor_trim",
+      "x": 32,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_E_S.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "id": 163,
+      "name": "floor_trim_raised_edge_W",
+      "category": "floor_trim",
+      "x": 48,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "W"
+      ]
+    },
+    {
+      "id": 164,
+      "name": "floor_trim_raised_edge_N_W",
+      "category": "floor_trim",
+      "x": 64,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "id": 165,
+      "name": "floor_trim_raised_edge_E_W",
+      "category": "floor_trim",
+      "x": 80,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_E_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 166,
+      "name": "floor_trim_raised_edge_N_E_W",
+      "category": "floor_trim",
+      "x": 96,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_E_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "id": 167,
+      "name": "floor_trim_raised_edge_S_W",
+      "category": "floor_trim",
+      "x": 112,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_S_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 168,
+      "name": "floor_trim_raised_edge_N_S_W",
+      "category": "floor_trim",
+      "x": 128,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_S_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 169,
+      "name": "floor_trim_raised_edge_E_S_W",
+      "category": "floor_trim",
+      "x": 144,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_E_S_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 170,
+      "name": "floor_trim_raised_edge_N_E_S_W",
+      "category": "floor_trim",
+      "x": 160,
+      "y": 160,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/floor_trim/floor_trim_raised_edge_N_E_S_W.png",
+      "trim_set": "raised_edge",
+      "trim_sides": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "id": 176,
+      "name": "shadow_north",
+      "category": "shadows",
+      "x": 0,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/shadows/shadow_north.png"
+    },
+    {
+      "id": 177,
+      "name": "shadow_west",
+      "category": "shadows",
+      "x": 16,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/shadows/shadow_west.png"
+    },
+    {
+      "id": 178,
+      "name": "shadow_corner",
+      "category": "shadows",
+      "x": 32,
+      "y": 176,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/shadows/shadow_corner.png"
+    },
+    {
+      "id": 192,
+      "name": "lab_bench_W",
+      "category": "benches",
+      "x": 0,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_W.png",
+      "cells": [
+        [
+          192
+        ],
+        [
+          208
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 193,
+      "name": "lab_bench_a",
+      "category": "benches",
+      "x": 16,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_a.png",
+      "cells": [
+        [
+          193
+        ],
+        [
+          209
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 194,
+      "name": "lab_bench_b",
+      "category": "benches",
+      "x": 32,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_b.png",
+      "cells": [
+        [
+          194
+        ],
+        [
+          210
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 195,
+      "name": "lab_bench_c",
+      "category": "benches",
+      "x": 48,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_c.png",
+      "cells": [
+        [
+          195
+        ],
+        [
+          211
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 196,
+      "name": "lab_bench_mid",
+      "category": "benches",
+      "x": 64,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_mid.png",
+      "cells": [
+        [
+          196
+        ],
+        [
+          212
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 197,
+      "name": "lab_bench_E",
+      "category": "benches",
+      "x": 80,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_E.png",
+      "cells": [
+        [
+          197
+        ],
+        [
+          213
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 198,
+      "name": "lab_bench_scope",
+      "category": "benches",
+      "x": 96,
+      "y": 192,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/benches/lab_bench_scope.png",
+      "cells": [
+        [
+          198
+        ],
+        [
+          214
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 224,
+      "name": "bunsen_burner_off",
+      "category": "animated",
+      "x": 0,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bunsen_burner_off.png",
+      "cells": [
+        [
+          224
+        ],
+        [
+          240
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bunsen_burner",
+      "frame": 0
+    },
+    {
+      "id": 225,
+      "name": "bunsen_burner_flame1",
+      "category": "animated",
+      "x": 16,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bunsen_burner_flame1.png",
+      "cells": [
+        [
+          225
+        ],
+        [
+          241
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bunsen_burner",
+      "frame": 1
+    },
+    {
+      "id": 226,
+      "name": "bunsen_burner_flame2",
+      "category": "animated",
+      "x": 32,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bunsen_burner_flame2.png",
+      "cells": [
+        [
+          226
+        ],
+        [
+          242
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bunsen_burner",
+      "frame": 2
+    },
+    {
+      "id": 227,
+      "name": "bunsen_burner_flame3",
+      "category": "animated",
+      "x": 48,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bunsen_burner_flame3.png",
+      "cells": [
+        [
+          227
+        ],
+        [
+          243
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bunsen_burner",
+      "frame": 3
+    },
+    {
+      "id": 228,
+      "name": "bubbling_flask_f0",
+      "category": "animated",
+      "x": 64,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bubbling_flask_f0.png",
+      "cells": [
+        [
+          228
+        ],
+        [
+          244
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bubbling_flask",
+      "frame": 0
+    },
+    {
+      "id": 229,
+      "name": "bubbling_flask_f1",
+      "category": "animated",
+      "x": 80,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bubbling_flask_f1.png",
+      "cells": [
+        [
+          229
+        ],
+        [
+          245
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bubbling_flask",
+      "frame": 1
+    },
+    {
+      "id": 230,
+      "name": "bubbling_flask_f2",
+      "category": "animated",
+      "x": 96,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bubbling_flask_f2.png",
+      "cells": [
+        [
+          230
+        ],
+        [
+          246
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bubbling_flask",
+      "frame": 2
+    },
+    {
+      "id": 231,
+      "name": "bubbling_flask_f3",
+      "category": "animated",
+      "x": 112,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/bubbling_flask_f3.png",
+      "cells": [
+        [
+          231
+        ],
+        [
+          247
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "bubbling_flask",
+      "frame": 3
+    },
+    {
+      "id": 232,
+      "name": "distillation_rig_f0",
+      "category": "animated",
+      "x": 128,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/distillation_rig_f0.png",
+      "cells": [
+        [
+          232
+        ],
+        [
+          248
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "distillation_rig",
+      "frame": 0
+    },
+    {
+      "id": 233,
+      "name": "distillation_rig_f1",
+      "category": "animated",
+      "x": 144,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/distillation_rig_f1.png",
+      "cells": [
+        [
+          233
+        ],
+        [
+          249
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "distillation_rig",
+      "frame": 1
+    },
+    {
+      "id": 234,
+      "name": "distillation_rig_f2",
+      "category": "animated",
+      "x": 160,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/distillation_rig_f2.png",
+      "cells": [
+        [
+          234
+        ],
+        [
+          250
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "distillation_rig",
+      "frame": 2
+    },
+    {
+      "id": 235,
+      "name": "distillation_rig_f3",
+      "category": "animated",
+      "x": 176,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/distillation_rig_f3.png",
+      "cells": [
+        [
+          235
+        ],
+        [
+          251
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "distillation_rig",
+      "frame": 3
+    },
+    {
+      "id": 236,
+      "name": "centrifuge_idle",
+      "category": "animated",
+      "x": 192,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/centrifuge_idle.png",
+      "cells": [
+        [
+          236
+        ],
+        [
+          252
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "centrifuge",
+      "frame": 0
+    },
+    {
+      "id": 237,
+      "name": "centrifuge_spin1",
+      "category": "animated",
+      "x": 208,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/centrifuge_spin1.png",
+      "cells": [
+        [
+          237
+        ],
+        [
+          253
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "centrifuge",
+      "frame": 1
+    },
+    {
+      "id": 238,
+      "name": "centrifuge_spin2",
+      "category": "animated",
+      "x": 224,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/centrifuge_spin2.png",
+      "cells": [
+        [
+          238
+        ],
+        [
+          254
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "centrifuge",
+      "frame": 2
+    },
+    {
+      "id": 239,
+      "name": "centrifuge_spin3",
+      "category": "animated",
+      "x": 240,
+      "y": 224,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/centrifuge_spin3.png",
+      "cells": [
+        [
+          239
+        ],
+        [
+          255
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "centrifuge",
+      "frame": 3
+    },
+    {
+      "id": 256,
+      "name": "centrifuge_done",
+      "category": "animated",
+      "x": 0,
+      "y": 256,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/centrifuge_done.png",
+      "cells": [
+        [
+          256
+        ],
+        [
+          272
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "centrifuge",
+      "frame": 4
+    },
+    {
+      "id": 257,
+      "name": "lab_sink_still",
+      "category": "animated",
+      "x": 16,
+      "y": 256,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/lab_sink_still.png",
+      "cells": [
+        [
+          257
+        ],
+        [
+          273
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "lab_sink",
+      "frame": 0
+    },
+    {
+      "id": 258,
+      "name": "lab_sink_drip1",
+      "category": "animated",
+      "x": 32,
+      "y": 256,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/lab_sink_drip1.png",
+      "cells": [
+        [
+          258
+        ],
+        [
+          274
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "lab_sink",
+      "frame": 1
+    },
+    {
+      "id": 259,
+      "name": "lab_sink_drip2",
+      "category": "animated",
+      "x": 48,
+      "y": 256,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/lab_sink_drip2.png",
+      "cells": [
+        [
+          259
+        ],
+        [
+          275
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "lab_sink",
+      "frame": 2
+    },
+    {
+      "id": 260,
+      "name": "lab_sink_splash",
+      "category": "animated",
+      "x": 64,
+      "y": 256,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/lab_sink_splash.png",
+      "cells": [
+        [
+          260
+        ],
+        [
+          276
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "lab_sink",
+      "frame": 3
+    },
+    {
+      "id": 288,
+      "name": "lab_stool",
+      "category": "seating",
+      "x": 0,
+      "y": 288,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/seating/lab_stool.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 304,
+      "name": "fume_hood_f0",
+      "category": "animated",
+      "x": 0,
+      "y": 304,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/fume_hood_f0.png",
+      "cells": [
+        [
+          304,
+          305
+        ],
+        [
+          320,
+          321
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "fume_hood",
+      "frame": 0
+    },
+    {
+      "id": 306,
+      "name": "fume_hood_f1",
+      "category": "animated",
+      "x": 32,
+      "y": 304,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/fume_hood_f1.png",
+      "cells": [
+        [
+          306,
+          307
+        ],
+        [
+          322,
+          323
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "fume_hood",
+      "frame": 1
+    },
+    {
+      "id": 308,
+      "name": "fume_hood_f2",
+      "category": "animated",
+      "x": 64,
+      "y": 304,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/fume_hood_f2.png",
+      "cells": [
+        [
+          308,
+          309
+        ],
+        [
+          324,
+          325
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "fume_hood",
+      "frame": 2
+    },
+    {
+      "id": 310,
+      "name": "fume_hood_f3",
+      "category": "animated",
+      "x": 96,
+      "y": 304,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/fume_hood_f3.png",
+      "cells": [
+        [
+          310,
+          311
+        ],
+        [
+          326,
+          327
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "fume_hood",
+      "frame": 3
+    },
+    {
+      "id": 312,
+      "name": "specimen_tank_f0",
+      "category": "animated",
+      "x": 128,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/specimen_tank_f0.png",
+      "cells": [
+        [
+          312
+        ],
+        [
+          328
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "specimen_tank",
+      "frame": 0
+    },
+    {
+      "id": 313,
+      "name": "specimen_tank_f1",
+      "category": "animated",
+      "x": 144,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/specimen_tank_f1.png",
+      "cells": [
+        [
+          313
+        ],
+        [
+          329
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "specimen_tank",
+      "frame": 1
+    },
+    {
+      "id": 314,
+      "name": "specimen_tank_f2",
+      "category": "animated",
+      "x": 160,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/specimen_tank_f2.png",
+      "cells": [
+        [
+          314
+        ],
+        [
+          330
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "specimen_tank",
+      "frame": 2
+    },
+    {
+      "id": 315,
+      "name": "specimen_tank_f3",
+      "category": "animated",
+      "x": 176,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/specimen_tank_f3.png",
+      "cells": [
+        [
+          315
+        ],
+        [
+          331
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "specimen_tank",
+      "frame": 3
+    },
+    {
+      "id": 316,
+      "name": "containment_pod_calm1",
+      "category": "animated",
+      "x": 192,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_calm1.png",
+      "cells": [
+        [
+          316
+        ],
+        [
+          332
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 0
+    },
+    {
+      "id": 317,
+      "name": "containment_pod_calm2",
+      "category": "animated",
+      "x": 208,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_calm2.png",
+      "cells": [
+        [
+          317
+        ],
+        [
+          333
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 1
+    },
+    {
+      "id": 318,
+      "name": "containment_pod_calm3",
+      "category": "animated",
+      "x": 224,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_calm3.png",
+      "cells": [
+        [
+          318
+        ],
+        [
+          334
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 2
+    },
+    {
+      "id": 319,
+      "name": "containment_pod_calm4",
+      "category": "animated",
+      "x": 240,
+      "y": 304,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_calm4.png",
+      "cells": [
+        [
+          319
+        ],
+        [
+          335
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 3
+    },
+    {
+      "id": 336,
+      "name": "containment_pod_alert",
+      "category": "animated",
+      "x": 0,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_alert.png",
+      "cells": [
+        [
+          336
+        ],
+        [
+          352
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 4
+    },
+    {
+      "id": 337,
+      "name": "containment_pod_alert2",
+      "category": "animated",
+      "x": 16,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/containment_pod_alert2.png",
+      "cells": [
+        [
+          337
+        ],
+        [
+          353
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "containment_pod",
+      "frame": 5
+    },
+    {
+      "id": 338,
+      "name": "decon_shower_off",
+      "category": "animated",
+      "x": 32,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/decon_shower_off.png",
+      "cells": [
+        [
+          338
+        ],
+        [
+          354
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "decon_shower",
+      "frame": 0
+    },
+    {
+      "id": 339,
+      "name": "decon_shower_spray1",
+      "category": "animated",
+      "x": 48,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/decon_shower_spray1.png",
+      "cells": [
+        [
+          339
+        ],
+        [
+          355
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "decon_shower",
+      "frame": 1
+    },
+    {
+      "id": 340,
+      "name": "decon_shower_spray2",
+      "category": "animated",
+      "x": 64,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/decon_shower_spray2.png",
+      "cells": [
+        [
+          340
+        ],
+        [
+          356
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "decon_shower",
+      "frame": 2
+    },
+    {
+      "id": 341,
+      "name": "decon_shower_spray3",
+      "category": "animated",
+      "x": 80,
+      "y": 336,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/decon_shower_spray3.png",
+      "cells": [
+        [
+          341
+        ],
+        [
+          357
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "decon_shower",
+      "frame": 3
+    },
+    {
+      "id": 368,
+      "name": "glove_box",
+      "category": "equipment",
+      "x": 0,
+      "y": 368,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/equipment/glove_box.png",
+      "cells": [
+        [
+          368,
+          369
+        ],
+        [
+          384,
+          385
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 370,
+      "name": "biohazard_bin",
+      "category": "equipment",
+      "x": 32,
+      "y": 368,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/equipment/biohazard_bin.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 400,
+      "name": "tesla_coil_idle",
+      "category": "animated",
+      "x": 0,
+      "y": 400,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/tesla_coil_idle.png",
+      "cells": [
+        [
+          400
+        ],
+        [
+          416
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "tesla_coil",
+      "frame": 0
+    },
+    {
+      "id": 401,
+      "name": "tesla_coil_arc1",
+      "category": "animated",
+      "x": 16,
+      "y": 400,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/tesla_coil_arc1.png",
+      "cells": [
+        [
+          401
+        ],
+        [
+          417
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "tesla_coil",
+      "frame": 1
+    },
+    {
+      "id": 402,
+      "name": "tesla_coil_arc2",
+      "category": "animated",
+      "x": 32,
+      "y": 400,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/tesla_coil_arc2.png",
+      "cells": [
+        [
+          402
+        ],
+        [
+          418
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "tesla_coil",
+      "frame": 2
+    },
+    {
+      "id": 403,
+      "name": "tesla_coil_arc3",
+      "category": "animated",
+      "x": 48,
+      "y": 400,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/tesla_coil_arc3.png",
+      "cells": [
+        [
+          403
+        ],
+        [
+          419
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "tesla_coil",
+      "frame": 3
+    },
+    {
+      "id": 404,
+      "name": "capacitor_bank_charge1",
+      "category": "animated",
+      "x": 64,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_charge1.png",
+      "cells": [
+        [
+          404,
+          405
+        ],
+        [
+          420,
+          421
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 0
+    },
+    {
+      "id": 406,
+      "name": "capacitor_bank_charge2",
+      "category": "animated",
+      "x": 96,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_charge2.png",
+      "cells": [
+        [
+          406,
+          407
+        ],
+        [
+          422,
+          423
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 1
+    },
+    {
+      "id": 408,
+      "name": "capacitor_bank_charge3",
+      "category": "animated",
+      "x": 128,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_charge3.png",
+      "cells": [
+        [
+          408,
+          409
+        ],
+        [
+          424,
+          425
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 2
+    },
+    {
+      "id": 410,
+      "name": "capacitor_bank_charge4",
+      "category": "animated",
+      "x": 160,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_charge4.png",
+      "cells": [
+        [
+          410,
+          411
+        ],
+        [
+          426,
+          427
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 3
+    },
+    {
+      "id": 412,
+      "name": "capacitor_bank_full",
+      "category": "animated",
+      "x": 192,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_full.png",
+      "cells": [
+        [
+          412,
+          413
+        ],
+        [
+          428,
+          429
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 4
+    },
+    {
+      "id": 414,
+      "name": "capacitor_bank_discharge",
+      "category": "animated",
+      "x": 224,
+      "y": 400,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/capacitor_bank_discharge.png",
+      "cells": [
+        [
+          414,
+          415
+        ],
+        [
+          430,
+          431
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "capacitor_bank",
+      "frame": 5
+    },
+    {
+      "id": 432,
+      "name": "control_console_W",
+      "category": "consoles",
+      "x": 0,
+      "y": 432,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/consoles/control_console_W.png",
+      "cells": [
+        [
+          432
+        ],
+        [
+          448
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 433,
+      "name": "control_console_mid",
+      "category": "consoles",
+      "x": 16,
+      "y": 432,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/consoles/control_console_mid.png",
+      "cells": [
+        [
+          433
+        ],
+        [
+          449
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 434,
+      "name": "control_console_lever",
+      "category": "consoles",
+      "x": 32,
+      "y": 432,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/consoles/control_console_lever.png",
+      "cells": [
+        [
+          434
+        ],
+        [
+          450
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 435,
+      "name": "control_console_E",
+      "category": "consoles",
+      "x": 48,
+      "y": 432,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/consoles/control_console_E.png",
+      "cells": [
+        [
+          435
+        ],
+        [
+          451
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 464,
+      "name": "console_scope_f0",
+      "category": "animated",
+      "x": 0,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_scope_f0.png",
+      "cells": [
+        [
+          464
+        ],
+        [
+          480
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_scope",
+      "frame": 0
+    },
+    {
+      "id": 465,
+      "name": "console_scope_f1",
+      "category": "animated",
+      "x": 16,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_scope_f1.png",
+      "cells": [
+        [
+          465
+        ],
+        [
+          481
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_scope",
+      "frame": 1
+    },
+    {
+      "id": 466,
+      "name": "console_scope_f2",
+      "category": "animated",
+      "x": 32,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_scope_f2.png",
+      "cells": [
+        [
+          466
+        ],
+        [
+          482
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_scope",
+      "frame": 2
+    },
+    {
+      "id": 467,
+      "name": "console_scope_f3",
+      "category": "animated",
+      "x": 48,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_scope_f3.png",
+      "cells": [
+        [
+          467
+        ],
+        [
+          483
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_scope",
+      "frame": 3
+    },
+    {
+      "id": 468,
+      "name": "console_buttons_f0",
+      "category": "animated",
+      "x": 64,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_buttons_f0.png",
+      "cells": [
+        [
+          468
+        ],
+        [
+          484
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_buttons",
+      "frame": 0
+    },
+    {
+      "id": 469,
+      "name": "console_buttons_f1",
+      "category": "animated",
+      "x": 80,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_buttons_f1.png",
+      "cells": [
+        [
+          469
+        ],
+        [
+          485
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_buttons",
+      "frame": 1
+    },
+    {
+      "id": 470,
+      "name": "console_buttons_f2",
+      "category": "animated",
+      "x": 96,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_buttons_f2.png",
+      "cells": [
+        [
+          470
+        ],
+        [
+          486
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_buttons",
+      "frame": 2
+    },
+    {
+      "id": 471,
+      "name": "console_buttons_f3",
+      "category": "animated",
+      "x": 112,
+      "y": 464,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/console_buttons_f3.png",
+      "cells": [
+        [
+          471
+        ],
+        [
+          487
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "console_buttons",
+      "frame": 3
+    },
+    {
+      "id": 472,
+      "name": "particle_ring_f0",
+      "category": "animated",
+      "x": 128,
+      "y": 464,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f0.png",
+      "cells": [
+        [
+          472,
+          473,
+          474
+        ],
+        [
+          488,
+          489,
+          490
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 0
+    },
+    {
+      "id": 475,
+      "name": "particle_ring_f1",
+      "category": "animated",
+      "x": 176,
+      "y": 464,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f1.png",
+      "cells": [
+        [
+          475,
+          476,
+          477
+        ],
+        [
+          491,
+          492,
+          493
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 1
+    },
+    {
+      "id": 496,
+      "name": "particle_ring_f2",
+      "category": "animated",
+      "x": 0,
+      "y": 496,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f2.png",
+      "cells": [
+        [
+          496,
+          497,
+          498
+        ],
+        [
+          512,
+          513,
+          514
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 2
+    },
+    {
+      "id": 499,
+      "name": "particle_ring_f3",
+      "category": "animated",
+      "x": 48,
+      "y": 496,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f3.png",
+      "cells": [
+        [
+          499,
+          500,
+          501
+        ],
+        [
+          515,
+          516,
+          517
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 3
+    },
+    {
+      "id": 502,
+      "name": "particle_ring_f4",
+      "category": "animated",
+      "x": 96,
+      "y": 496,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f4.png",
+      "cells": [
+        [
+          502,
+          503,
+          504
+        ],
+        [
+          518,
+          519,
+          520
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 4
+    },
+    {
+      "id": 505,
+      "name": "particle_ring_f5",
+      "category": "animated",
+      "x": 144,
+      "y": 496,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f5.png",
+      "cells": [
+        [
+          505,
+          506,
+          507
+        ],
+        [
+          521,
+          522,
+          523
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 5
+    },
+    {
+      "id": 508,
+      "name": "particle_ring_f6",
+      "category": "animated",
+      "x": 192,
+      "y": 496,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f6.png",
+      "cells": [
+        [
+          508,
+          509,
+          510
+        ],
+        [
+          524,
+          525,
+          526
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 6
+    },
+    {
+      "id": 528,
+      "name": "particle_ring_f7",
+      "category": "animated",
+      "x": 0,
+      "y": 528,
+      "w": 48,
+      "h": 32,
+      "file": "tiles/{scale}/animated/particle_ring_f7.png",
+      "cells": [
+        [
+          528,
+          529,
+          530
+        ],
+        [
+          544,
+          545,
+          546
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "particle_ring",
+      "frame": 7
+    },
+    {
+      "id": 560,
+      "name": "desk_W",
+      "category": "desks",
+      "x": 0,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_W.png",
+      "cells": [
+        [
+          560
+        ],
+        [
+          576
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 561,
+      "name": "desk_a",
+      "category": "desks",
+      "x": 16,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_a.png",
+      "cells": [
+        [
+          561
+        ],
+        [
+          577
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 562,
+      "name": "desk_b",
+      "category": "desks",
+      "x": 32,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_b.png",
+      "cells": [
+        [
+          562
+        ],
+        [
+          578
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 563,
+      "name": "desk_c",
+      "category": "desks",
+      "x": 48,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_c.png",
+      "cells": [
+        [
+          563
+        ],
+        [
+          579
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 564,
+      "name": "desk_mid",
+      "category": "desks",
+      "x": 64,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_mid.png",
+      "cells": [
+        [
+          564
+        ],
+        [
+          580
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 565,
+      "name": "desk_E",
+      "category": "desks",
+      "x": 80,
+      "y": 560,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/desks/desk_E.png",
+      "cells": [
+        [
+          565
+        ],
+        [
+          581
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 592,
+      "name": "research_pc_f0",
+      "category": "animated",
+      "x": 0,
+      "y": 592,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/research_pc_f0.png",
+      "cells": [
+        [
+          592
+        ],
+        [
+          608
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "research_pc",
+      "frame": 0
+    },
+    {
+      "id": 593,
+      "name": "research_pc_f1",
+      "category": "animated",
+      "x": 16,
+      "y": 592,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/research_pc_f1.png",
+      "cells": [
+        [
+          593
+        ],
+        [
+          609
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "research_pc",
+      "frame": 1
+    },
+    {
+      "id": 594,
+      "name": "research_pc_f2",
+      "category": "animated",
+      "x": 32,
+      "y": 592,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/research_pc_f2.png",
+      "cells": [
+        [
+          594
+        ],
+        [
+          610
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "research_pc",
+      "frame": 2
+    },
+    {
+      "id": 595,
+      "name": "research_pc_f3",
+      "category": "animated",
+      "x": 48,
+      "y": 592,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/research_pc_f3.png",
+      "cells": [
+        [
+          595
+        ],
+        [
+          611
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "research_pc",
+      "frame": 3
+    },
+    {
+      "id": 624,
+      "name": "office_chair_N",
+      "category": "seating",
+      "x": 0,
+      "y": 624,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/seating/office_chair_N.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 625,
+      "name": "office_chair_S",
+      "category": "seating",
+      "x": 16,
+      "y": 624,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/seating/office_chair_S.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 626,
+      "name": "office_chair_E",
+      "category": "seating",
+      "x": 32,
+      "y": 624,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/seating/office_chair_E.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 627,
+      "name": "office_chair_W",
+      "category": "seating",
+      "x": 48,
+      "y": 624,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/seating/office_chair_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 640,
+      "name": "server_rack_f0",
+      "category": "animated",
+      "x": 0,
+      "y": 640,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/server_rack_f0.png",
+      "cells": [
+        [
+          640
+        ],
+        [
+          656
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "server_rack",
+      "frame": 0
+    },
+    {
+      "id": 641,
+      "name": "server_rack_f1",
+      "category": "animated",
+      "x": 16,
+      "y": 640,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/server_rack_f1.png",
+      "cells": [
+        [
+          641
+        ],
+        [
+          657
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "server_rack",
+      "frame": 1
+    },
+    {
+      "id": 642,
+      "name": "server_rack_f2",
+      "category": "animated",
+      "x": 32,
+      "y": 640,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/server_rack_f2.png",
+      "cells": [
+        [
+          642
+        ],
+        [
+          658
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "server_rack",
+      "frame": 2
+    },
+    {
+      "id": 643,
+      "name": "server_rack_f3",
+      "category": "animated",
+      "x": 48,
+      "y": 640,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/server_rack_f3.png",
+      "cells": [
+        [
+          643
+        ],
+        [
+          659
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "server_rack",
+      "frame": 3
+    },
+    {
+      "id": 672,
+      "name": "filing_cabinet_closed",
+      "category": "storage",
+      "x": 0,
+      "y": 672,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/storage/filing_cabinet_closed.png",
+      "cells": [
+        [
+          672
+        ],
+        [
+          688
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 673,
+      "name": "filing_cabinet_open",
+      "category": "storage",
+      "x": 16,
+      "y": 672,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/storage/filing_cabinet_open.png",
+      "cells": [
+        [
+          673
+        ],
+        [
+          689
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 674,
+      "name": "bookcase",
+      "category": "storage",
+      "x": 32,
+      "y": 672,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/storage/bookcase.png",
+      "cells": [
+        [
+          674,
+          675
+        ],
+        [
+          690,
+          691
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 676,
+      "name": "plant",
+      "category": "decor",
+      "x": 64,
+      "y": 672,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/decor/plant.png",
+      "cells": [
+        [
+          676
+        ],
+        [
+          692
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 677,
+      "name": "trash_can_grey",
+      "category": "decor",
+      "x": 80,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decor/trash_can_grey.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 678,
+      "name": "trash_can_recycle",
+      "category": "decor",
+      "x": 96,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decor/trash_can_recycle.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 679,
+      "name": "glass_partition_post",
+      "category": "partitions",
+      "x": 112,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_post.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 680,
+      "name": "glass_partition_N",
+      "category": "partitions",
+      "x": 128,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 681,
+      "name": "glass_partition_E",
+      "category": "partitions",
+      "x": 144,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_E.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 682,
+      "name": "glass_partition_N_E",
+      "category": "partitions",
+      "x": 160,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_E.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 683,
+      "name": "glass_partition_S",
+      "category": "partitions",
+      "x": 176,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_S.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 684,
+      "name": "glass_partition_N_S",
+      "category": "partitions",
+      "x": 192,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_S.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 685,
+      "name": "glass_partition_E_S",
+      "category": "partitions",
+      "x": 208,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_E_S.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 686,
+      "name": "glass_partition_N_E_S",
+      "category": "partitions",
+      "x": 224,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_E_S.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 687,
+      "name": "glass_partition_W",
+      "category": "partitions",
+      "x": 240,
+      "y": 672,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 693,
+      "name": "glass_partition_N_W",
+      "category": "partitions",
+      "x": 80,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 694,
+      "name": "glass_partition_E_W",
+      "category": "partitions",
+      "x": 96,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_E_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 695,
+      "name": "glass_partition_N_E_W",
+      "category": "partitions",
+      "x": 112,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_E_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 696,
+      "name": "glass_partition_S_W",
+      "category": "partitions",
+      "x": 128,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_S_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 697,
+      "name": "glass_partition_N_S_W",
+      "category": "partitions",
+      "x": 144,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_S_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 698,
+      "name": "glass_partition_E_S_W",
+      "category": "partitions",
+      "x": 160,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_E_S_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 699,
+      "name": "glass_partition_N_E_S_W",
+      "category": "partitions",
+      "x": 176,
+      "y": 688,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/partitions/glass_partition_N_E_S_W.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 700,
+      "name": "lab_window_W",
+      "category": "windows",
+      "x": 192,
+      "y": 688,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/windows/lab_window_W.png",
+      "cells": [
+        [
+          700
+        ],
+        [
+          716
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 701,
+      "name": "lab_window_a",
+      "category": "windows",
+      "x": 208,
+      "y": 688,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/windows/lab_window_a.png",
+      "cells": [
+        [
+          701
+        ],
+        [
+          717
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 702,
+      "name": "lab_window_b",
+      "category": "windows",
+      "x": 224,
+      "y": 688,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/windows/lab_window_b.png",
+      "cells": [
+        [
+          702
+        ],
+        [
+          718
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 703,
+      "name": "lab_window_c",
+      "category": "windows",
+      "x": 240,
+      "y": 688,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/windows/lab_window_c.png",
+      "cells": [
+        [
+          703
+        ],
+        [
+          719
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 704,
+      "name": "lab_window_E",
+      "category": "windows",
+      "x": 0,
+      "y": 704,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/windows/lab_window_E.png",
+      "cells": [
+        [
+          704
+        ],
+        [
+          720
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 736,
+      "name": "airlock_door_closed",
+      "category": "animated",
+      "x": 0,
+      "y": 736,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/airlock_door_closed.png",
+      "cells": [
+        [
+          736,
+          737
+        ],
+        [
+          752,
+          753
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "airlock_door",
+      "frame": 0
+    },
+    {
+      "id": 738,
+      "name": "airlock_door_opening",
+      "category": "animated",
+      "x": 32,
+      "y": 736,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/airlock_door_opening.png",
+      "cells": [
+        [
+          738,
+          739
+        ],
+        [
+          754,
+          755
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "airlock_door",
+      "frame": 1
+    },
+    {
+      "id": 740,
+      "name": "airlock_door_wide",
+      "category": "animated",
+      "x": 64,
+      "y": 736,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/airlock_door_wide.png",
+      "cells": [
+        [
+          740,
+          741
+        ],
+        [
+          756,
+          757
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "airlock_door",
+      "frame": 2
+    },
+    {
+      "id": 742,
+      "name": "airlock_door_open",
+      "category": "animated",
+      "x": 96,
+      "y": 736,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/animated/airlock_door_open.png",
+      "cells": [
+        [
+          742,
+          743
+        ],
+        [
+          758,
+          759
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "airlock_door",
+      "frame": 3
+    },
+    {
+      "id": 744,
+      "name": "keycard_door_locked",
+      "category": "animated",
+      "x": 128,
+      "y": 736,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/keycard_door_locked.png",
+      "cells": [
+        [
+          744
+        ],
+        [
+          760
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "keycard_door",
+      "frame": 0
+    },
+    {
+      "id": 745,
+      "name": "keycard_door_granted",
+      "category": "animated",
+      "x": 144,
+      "y": 736,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/keycard_door_granted.png",
+      "cells": [
+        [
+          745
+        ],
+        [
+          761
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "keycard_door",
+      "frame": 1
+    },
+    {
+      "id": 746,
+      "name": "keycard_door_opening",
+      "category": "animated",
+      "x": 160,
+      "y": 736,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/keycard_door_opening.png",
+      "cells": [
+        [
+          746
+        ],
+        [
+          762
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "keycard_door",
+      "frame": 2
+    },
+    {
+      "id": 747,
+      "name": "keycard_door_open",
+      "category": "animated",
+      "x": 176,
+      "y": 736,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/keycard_door_open.png",
+      "cells": [
+        [
+          747
+        ],
+        [
+          763
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "keycard_door",
+      "frame": 3
+    },
+    {
+      "id": 748,
+      "name": "alarm_beacon_r0",
+      "category": "animated",
+      "x": 192,
+      "y": 736,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/alarm_beacon_r0.png",
+      "layer": "WallDecor",
+      "animation": "alarm_beacon",
+      "frame": 0
+    },
+    {
+      "id": 749,
+      "name": "alarm_beacon_r1",
+      "category": "animated",
+      "x": 208,
+      "y": 736,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/alarm_beacon_r1.png",
+      "layer": "WallDecor",
+      "animation": "alarm_beacon",
+      "frame": 1
+    },
+    {
+      "id": 750,
+      "name": "alarm_beacon_r2",
+      "category": "animated",
+      "x": 224,
+      "y": 736,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/alarm_beacon_r2.png",
+      "layer": "WallDecor",
+      "animation": "alarm_beacon",
+      "frame": 2
+    },
+    {
+      "id": 751,
+      "name": "alarm_beacon_off",
+      "category": "animated",
+      "x": 240,
+      "y": 736,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/alarm_beacon_off.png",
+      "layer": "WallDecor",
+      "animation": "alarm_beacon",
+      "frame": 3
+    },
+    {
+      "id": 764,
+      "name": "tube_light_on",
+      "category": "animated",
+      "x": 192,
+      "y": 752,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/tube_light_on.png",
+      "cells": [
+        [
+          764,
+          765
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "tube_light",
+      "frame": 0
+    },
+    {
+      "id": 766,
+      "name": "tube_light_dim",
+      "category": "animated",
+      "x": 224,
+      "y": 752,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/tube_light_dim.png",
+      "cells": [
+        [
+          766,
+          767
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "tube_light",
+      "frame": 1
+    },
+    {
+      "id": 768,
+      "name": "tube_light_off",
+      "category": "animated",
+      "x": 0,
+      "y": 768,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/tube_light_off.png",
+      "cells": [
+        [
+          768,
+          769
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "tube_light",
+      "frame": 2
+    },
+    {
+      "id": 770,
+      "name": "wall_monitor_f0",
+      "category": "animated",
+      "x": 32,
+      "y": 768,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_monitor_f0.png",
+      "cells": [
+        [
+          770,
+          771
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "wall_monitor",
+      "frame": 0
+    },
+    {
+      "id": 772,
+      "name": "wall_monitor_f1",
+      "category": "animated",
+      "x": 64,
+      "y": 768,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_monitor_f1.png",
+      "cells": [
+        [
+          772,
+          773
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "wall_monitor",
+      "frame": 1
+    },
+    {
+      "id": 774,
+      "name": "wall_monitor_f2",
+      "category": "animated",
+      "x": 96,
+      "y": 768,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_monitor_f2.png",
+      "cells": [
+        [
+          774,
+          775
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "wall_monitor",
+      "frame": 2
+    },
+    {
+      "id": 776,
+      "name": "wall_monitor_f3",
+      "category": "animated",
+      "x": 128,
+      "y": 768,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_monitor_f3.png",
+      "cells": [
+        [
+          776,
+          777
+        ]
+      ],
+      "layer": "WallDecor",
+      "animation": "wall_monitor",
+      "frame": 3
+    },
+    {
+      "id": 784,
+      "name": "periodic_table",
+      "category": "wall_decor",
+      "x": 0,
+      "y": 784,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/periodic_table.png",
+      "cells": [
+        [
+          784,
+          785
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 786,
+      "name": "poster_atom",
+      "category": "wall_decor",
+      "x": 32,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/poster_atom.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 787,
+      "name": "poster_dna",
+      "category": "wall_decor",
+      "x": 48,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/poster_dna.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 788,
+      "name": "poster_goggles",
+      "category": "wall_decor",
+      "x": 64,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/poster_goggles.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 789,
+      "name": "poster_flask",
+      "category": "wall_decor",
+      "x": 80,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/poster_flask.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 790,
+      "name": "hazard_sign_biohazard",
+      "category": "signs",
+      "x": 96,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/signs/hazard_sign_biohazard.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 791,
+      "name": "hazard_sign_radiation",
+      "category": "signs",
+      "x": 112,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/signs/hazard_sign_radiation.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 792,
+      "name": "hazard_sign_flammable",
+      "category": "signs",
+      "x": 128,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/signs/hazard_sign_flammable.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 793,
+      "name": "hazard_sign_laser",
+      "category": "signs",
+      "x": 144,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/signs/hazard_sign_laser.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 794,
+      "name": "eyewash_station",
+      "category": "wall_decor",
+      "x": 160,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/eyewash_station.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 795,
+      "name": "first_aid",
+      "category": "wall_decor",
+      "x": 176,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/first_aid.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 796,
+      "name": "fire_extinguisher",
+      "category": "wall_decor",
+      "x": 192,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/fire_extinguisher.png",
+      "layer": "WallDecor"
+    },
+    {
+      "id": 797,
+      "name": "exit_sign",
+      "category": "signs",
+      "x": 208,
+      "y": 784,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/signs/exit_sign.png",
+      "cells": [
+        [
+          797,
+          798
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 800,
+      "name": "lab_sign",
+      "category": "signs",
+      "x": 0,
+      "y": 800,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/signs/lab_sign.png",
+      "cells": [
+        [
+          800,
+          801
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 802,
+      "name": "whiteboard",
+      "category": "wall_decor",
+      "x": 32,
+      "y": 800,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/whiteboard.png",
+      "cells": [
+        [
+          802,
+          803
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 804,
+      "name": "chem_shelf",
+      "category": "wall_decor",
+      "x": 64,
+      "y": 800,
+      "w": 32,
+      "h": 16,
+      "file": "tiles/{scale}/wall_decor/chem_shelf.png",
+      "cells": [
+        [
+          804,
+          805
+        ]
+      ],
+      "layer": "WallDecor"
+    },
+    {
+      "id": 799,
+      "name": "chem_spill_green",
+      "category": "decals",
+      "x": 240,
+      "y": 784,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/chem_spill_green.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 806,
+      "name": "chem_spill_blue",
+      "category": "decals",
+      "x": 96,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/chem_spill_blue.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 807,
+      "name": "broken_glass",
+      "category": "decals",
+      "x": 112,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/broken_glass.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 808,
+      "name": "papers",
+      "category": "decals",
+      "x": 128,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/papers.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 809,
+      "name": "hazard_tape_h",
+      "category": "decals",
+      "x": 144,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/hazard_tape_h.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 810,
+      "name": "hazard_tape_v",
+      "category": "decals",
+      "x": 160,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/hazard_tape_v.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 811,
+      "name": "floor_drain",
+      "category": "decals",
+      "x": 176,
+      "y": 800,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/floor_drain.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 816,
+      "name": "sample_fridge_closed",
+      "category": "animated",
+      "x": 0,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/sample_fridge_closed.png",
+      "cells": [
+        [
+          816
+        ],
+        [
+          832
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "sample_fridge",
+      "frame": 0
+    },
+    {
+      "id": 817,
+      "name": "sample_fridge_ajar",
+      "category": "animated",
+      "x": 16,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/sample_fridge_ajar.png",
+      "cells": [
+        [
+          817
+        ],
+        [
+          833
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "sample_fridge",
+      "frame": 1
+    },
+    {
+      "id": 818,
+      "name": "sample_fridge_open",
+      "category": "animated",
+      "x": 32,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/sample_fridge_open.png",
+      "cells": [
+        [
+          818
+        ],
+        [
+          834
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "sample_fridge",
+      "frame": 2
+    },
+    {
+      "id": 819,
+      "name": "sample_fridge_mist",
+      "category": "animated",
+      "x": 48,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/sample_fridge_mist.png",
+      "cells": [
+        [
+          819
+        ],
+        [
+          835
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "sample_fridge",
+      "frame": 3
+    },
+    {
+      "id": 820,
+      "name": "hologram_projector_f0",
+      "category": "animated",
+      "x": 64,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/hologram_projector_f0.png",
+      "cells": [
+        [
+          820
+        ],
+        [
+          836
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "hologram_projector",
+      "frame": 0
+    },
+    {
+      "id": 821,
+      "name": "hologram_projector_f1",
+      "category": "animated",
+      "x": 80,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/hologram_projector_f1.png",
+      "cells": [
+        [
+          821
+        ],
+        [
+          837
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "hologram_projector",
+      "frame": 1
+    },
+    {
+      "id": 822,
+      "name": "hologram_projector_f2",
+      "category": "animated",
+      "x": 96,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/hologram_projector_f2.png",
+      "cells": [
+        [
+          822
+        ],
+        [
+          838
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "hologram_projector",
+      "frame": 2
+    },
+    {
+      "id": 823,
+      "name": "hologram_projector_f3",
+      "category": "animated",
+      "x": 112,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/hologram_projector_f3.png",
+      "cells": [
+        [
+          823
+        ],
+        [
+          839
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "hologram_projector",
+      "frame": 3
+    },
+    {
+      "id": 824,
+      "name": "plasma_globe_f0",
+      "category": "animated",
+      "x": 128,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/plasma_globe_f0.png",
+      "cells": [
+        [
+          824
+        ],
+        [
+          840
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "plasma_globe",
+      "frame": 0
+    },
+    {
+      "id": 825,
+      "name": "plasma_globe_f1",
+      "category": "animated",
+      "x": 144,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/plasma_globe_f1.png",
+      "cells": [
+        [
+          825
+        ],
+        [
+          841
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "plasma_globe",
+      "frame": 1
+    },
+    {
+      "id": 826,
+      "name": "plasma_globe_f2",
+      "category": "animated",
+      "x": 160,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/plasma_globe_f2.png",
+      "cells": [
+        [
+          826
+        ],
+        [
+          842
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "plasma_globe",
+      "frame": 2
+    },
+    {
+      "id": 827,
+      "name": "plasma_globe_f3",
+      "category": "animated",
+      "x": 176,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/plasma_globe_f3.png",
+      "cells": [
+        [
+          827
+        ],
+        [
+          843
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "plasma_globe",
+      "frame": 3
+    },
+    {
+      "id": 828,
+      "name": "mouse_cage_f0",
+      "category": "animated",
+      "x": 192,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/mouse_cage_f0.png",
+      "cells": [
+        [
+          828
+        ],
+        [
+          844
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "mouse_cage",
+      "frame": 0
+    },
+    {
+      "id": 829,
+      "name": "mouse_cage_f1",
+      "category": "animated",
+      "x": 208,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/mouse_cage_f1.png",
+      "cells": [
+        [
+          829
+        ],
+        [
+          845
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "mouse_cage",
+      "frame": 1
+    },
+    {
+      "id": 830,
+      "name": "mouse_cage_f2",
+      "category": "animated",
+      "x": 224,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/mouse_cage_f2.png",
+      "cells": [
+        [
+          830
+        ],
+        [
+          846
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "mouse_cage",
+      "frame": 2
+    },
+    {
+      "id": 831,
+      "name": "mouse_cage_f3",
+      "category": "animated",
+      "x": 240,
+      "y": 816,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/mouse_cage_f3.png",
+      "cells": [
+        [
+          831
+        ],
+        [
+          847
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "mouse_cage",
+      "frame": 3
+    },
+    {
+      "id": 848,
+      "name": "robot_arm_pick",
+      "category": "animated",
+      "x": 0,
+      "y": 848,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/robot_arm_pick.png",
+      "cells": [
+        [
+          848
+        ],
+        [
+          864
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "robot_arm",
+      "frame": 0
+    },
+    {
+      "id": 849,
+      "name": "robot_arm_lift",
+      "category": "animated",
+      "x": 16,
+      "y": 848,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/robot_arm_lift.png",
+      "cells": [
+        [
+          849
+        ],
+        [
+          865
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "robot_arm",
+      "frame": 1
+    },
+    {
+      "id": 850,
+      "name": "robot_arm_swing",
+      "category": "animated",
+      "x": 32,
+      "y": 848,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/robot_arm_swing.png",
+      "cells": [
+        [
+          850
+        ],
+        [
+          866
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "robot_arm",
+      "frame": 2
+    },
+    {
+      "id": 851,
+      "name": "robot_arm_place",
+      "category": "animated",
+      "x": 48,
+      "y": 848,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/animated/robot_arm_place.png",
+      "cells": [
+        [
+          851
+        ],
+        [
+          867
+        ]
+      ],
+      "layer": "Furniture",
+      "animation": "robot_arm",
+      "frame": 3
+    },
+    {
+      "id": 852,
+      "name": "wall_clock_s0",
+      "category": "animated",
+      "x": 64,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s0.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 0
+    },
+    {
+      "id": 853,
+      "name": "wall_clock_s1",
+      "category": "animated",
+      "x": 80,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s1.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 1
+    },
+    {
+      "id": 854,
+      "name": "wall_clock_s2",
+      "category": "animated",
+      "x": 96,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s2.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 2
+    },
+    {
+      "id": 855,
+      "name": "wall_clock_s3",
+      "category": "animated",
+      "x": 112,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s3.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 3
+    },
+    {
+      "id": 856,
+      "name": "wall_clock_s4",
+      "category": "animated",
+      "x": 128,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s4.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 4
+    },
+    {
+      "id": 857,
+      "name": "wall_clock_s5",
+      "category": "animated",
+      "x": 144,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s5.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 5
+    },
+    {
+      "id": 858,
+      "name": "wall_clock_s6",
+      "category": "animated",
+      "x": 160,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s6.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 6
+    },
+    {
+      "id": 859,
+      "name": "wall_clock_s7",
+      "category": "animated",
+      "x": 176,
+      "y": 848,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/animated/wall_clock_s7.png",
+      "layer": "WallDecor",
+      "animation": "wall_clock",
+      "frame": 7
+    },
+    {
+      "id": 880,
+      "name": "lab_coat_rack",
+      "category": "decor",
+      "x": 0,
+      "y": 880,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/decor/lab_coat_rack.png",
+      "cells": [
+        [
+          880
+        ],
+        [
+          896
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 881,
+      "name": "gas_cylinders",
+      "category": "equipment",
+      "x": 16,
+      "y": 880,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/equipment/gas_cylinders.png",
+      "cells": [
+        [
+          881
+        ],
+        [
+          897
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 882,
+      "name": "flammables_cabinet",
+      "category": "storage",
+      "x": 32,
+      "y": 880,
+      "w": 16,
+      "h": 32,
+      "file": "tiles/{scale}/storage/flammables_cabinet.png",
+      "cells": [
+        [
+          882
+        ],
+        [
+          898
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 883,
+      "name": "supply_shelf",
+      "category": "storage",
+      "x": 48,
+      "y": 880,
+      "w": 32,
+      "h": 32,
+      "file": "tiles/{scale}/storage/supply_shelf.png",
+      "cells": [
+        [
+          883,
+          884
+        ],
+        [
+          899,
+          900
+        ]
+      ],
+      "layer": "Furniture"
+    },
+    {
+      "id": 885,
+      "name": "lab_cart",
+      "category": "equipment",
+      "x": 80,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/equipment/lab_cart.png",
+      "layer": "Furniture"
+    },
+    {
+      "id": 886,
+      "name": "glowing_footprints_a",
+      "category": "decals",
+      "x": 96,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/glowing_footprints_a.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 887,
+      "name": "glowing_footprints_b",
+      "category": "decals",
+      "x": 112,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/glowing_footprints_b.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 888,
+      "name": "scorch_mark",
+      "category": "decals",
+      "x": 128,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/scorch_mark.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 889,
+      "name": "cable_run_h",
+      "category": "decals",
+      "x": 144,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/cable_run_h.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 890,
+      "name": "cable_run_v",
+      "category": "decals",
+      "x": 160,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/cable_run_v.png",
+      "layer": "Decals"
+    },
+    {
+      "id": 891,
+      "name": "dropped_vials",
+      "category": "decals",
+      "x": 176,
+      "y": 880,
+      "w": 16,
+      "h": 16,
+      "file": "tiles/{scale}/decals/dropped_vials.png",
+      "layer": "Decals"
+    }
+  ]
+}
