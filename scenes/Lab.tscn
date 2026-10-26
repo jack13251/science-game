@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://gpvakwdoser2"]
+
+[ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_qpe5b"]
+
+[node name="Node2D" type="Node2D" unique_id=1735809296]
+
+[node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_qpe5b")]
