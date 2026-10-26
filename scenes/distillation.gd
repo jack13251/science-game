@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var near = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -8,13 +8,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if near == true:
+		if Input.is_action_just_pressed("Interact"):
+			print("Distillation Apparatus INTERACTED")
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	$"../CanvasLayer/Label".show()
-	$"../CanvasLayer/Label".text = "Press F to interact with the distillation apparatus"
+	$"../CanvasLayer/Label".text = "Press F to interact with the Distillation Apparatus"
+	near = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	$"../CanvasLayer/Label".hide()
+	near = false
