@@ -10,12 +10,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if near == true:
 		if Input.is_action_just_pressed("Interact"):
-			print("COMPUTER INTERACTED")
+			$CanvasLayer.show()
+			$"../CanvasLayer/Label".hide()
+		if Input.is_action_just_pressed("ui_close_dialog"):
+			$CanvasLayer.hide()
+			$"../CanvasLayer/Label".show()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	$"../CanvasLayer/Label".show()
-	$"../CanvasLayer/Label".text = "Press F to interact with the Computer"
+	$"../CanvasLayer/Label".text = "Press F to interact with the Distillation Apparatus"
 	near = true
 
 

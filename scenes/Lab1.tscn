@@ -2,9 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_3ip2b"]
 [ext_resource type="Texture2D" uid="uid://cqte624vc4al" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tilesets/research_lab_tileset_4x.png" id="2_qjypl"]
-[ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scenes/sink.gd" id="3_qjypl"]
-[ext_resource type="Script" uid="uid://5w0uav6j7g0v" path="res://scenes/distillation.gd" id="4_eketx"]
-[ext_resource type="Script" uid="uid://7jll2be8jqv8" path="res://scenes/computer.gd" id="5_0hoth"]
+[ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scripts/sink.gd" id="3_qjypl"]
+[ext_resource type="Script" uid="uid://5w0uav6j7g0v" path="res://scripts/distillation.gd" id="4_eketx"]
+[ext_resource type="Script" uid="uid://7jll2be8jqv8" path="res://scripts/computer.gd" id="5_0hoth"]
+[ext_resource type="Texture2D" uid="uid://b3udcn7gldfip" path="res://assets/Temporary Lab book.png" id="5_4nvb3"]
+[ext_resource type="Texture2D" uid="uid://bi1rp85lwsgef" path="res://assets/pixel-art-monitor-computer-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="6_coeus"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_qjypl")
@@ -666,6 +668,14 @@ position = Vector2(227.5, -108)
 scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_3ip2b")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Distillation" unique_id=167925368]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Distillation/CanvasLayer" unique_id=1197534087]
+position = Vector2(572, 328.00003)
+scale = Vector2(0.7607422, 0.7607422)
+texture = ExtResource("5_4nvb3")
+
 [node name="Computer" type="Node2D" parent="." unique_id=1803054258]
 script = ExtResource("5_0hoth")
 
@@ -675,6 +685,14 @@ script = ExtResource("5_0hoth")
 position = Vector2(-31.5, -78.5)
 scale = Vector2(1.85, 1.85)
 shape = SubResource("RectangleShape2D_0hoth")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Computer" unique_id=1605082707]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer/CanvasLayer" unique_id=631544916]
+position = Vector2(585, 318)
+scale = Vector2(1.2517564, 1.2517564)
+texture = ExtResource("6_coeus")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=157632460]
 
