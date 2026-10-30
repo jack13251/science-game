@@ -15,6 +15,10 @@ run/main_scene="uid://gpvakwdoser2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+Recipes="*uid://c6i3tfnxpbbjv"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

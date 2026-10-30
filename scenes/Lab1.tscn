@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://5w0uav6j7g0v" path="res://scripts/distillation.gd" id="4_eketx"]
 [ext_resource type="Script" uid="uid://7jll2be8jqv8" path="res://scripts/computer.gd" id="5_0hoth"]
 [ext_resource type="Texture2D" uid="uid://b3udcn7gldfip" path="res://assets/Temporary Lab book.png" id="5_4nvb3"]
+[ext_resource type="Texture2D" uid="uid://b656dsvus6ayq" path="res://assets/temp lab book patch.png" id="6_a5bg7"]
 [ext_resource type="Texture2D" uid="uid://bi1rp85lwsgef" path="res://assets/pixel-art-monitor-computer-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="6_coeus"]
+[ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="7_v02c1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_qjypl")
@@ -607,6 +609,9 @@ normal = Vector2(1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ip2b"]
 size = Vector2(8.108107, 20)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3oiiy"]
+load_path = "res://.godot/imported/temp lab book patch.png-e2db1d6648775734c3355fa5c752de50.ctex"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hoth"]
 size = Vector2(13.513515, 53.51351)
 
@@ -676,6 +681,50 @@ position = Vector2(572, 328.00003)
 scale = Vector2(0.7607422, 0.7607422)
 texture = ExtResource("5_4nvb3")
 
+[node name="TempLabBookPatch" type="Sprite2D" parent="Distillation/CanvasLayer/Sprite2D" unique_id=1018371827]
+z_index = 2
+position = Vector2(-74.92685, -151.16821)
+texture = ExtResource("6_a5bg7")
+region_enabled = true
+region_rect = Rect2(201, 345, 153, 27)
+
+[node name="TempLabBookPatch2" type="Sprite2D" parent="Distillation/CanvasLayer/Sprite2D" unique_id=666846158]
+z_index = 2
+position = Vector2(-339.27182, -263.73593)
+scale = Vector2(2.6822515, 1.8145057)
+texture = SubResource("CompressedTexture2D_3oiiy")
+region_enabled = true
+region_rect = Rect2(201, 345, 153, 27)
+
+[node name="Coolant" type="Label" parent="Distillation/CanvasLayer/Sprite2D" unique_id=946922244]
+z_index = 3
+offset_left = -126.19255
+offset_top = -162.99876
+offset_right = -30.19255
+offset_bottom = -140.99876
+theme_override_colors/font_color = Color(0.09019608, 0.14901961, 0.24705882, 1)
+theme_override_fonts/font = ExtResource("7_v02c1")
+theme_override_font_sizes/font_size = 19
+text = "Select Coolant"
+
+[node name="Label" type="Label" parent="Distillation/CanvasLayer/Sprite2D" unique_id=330009390]
+z_index = 2
+offset_left = -542.89087
+offset_top = -294.44934
+offset_right = -108.89087
+offset_bottom = -271.44934
+theme_override_colors/font_color = Color(0.4627451, 0.5137255, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("7_v02c1")
+theme_override_font_sizes/font_size = 20
+text = "Seperates pure liquids from other
+impurities using heat."
+
+[node name="Start" type="Button" parent="Distillation/CanvasLayer/Sprite2D" unique_id=1249930326]
+offset_left = 145.91014
+offset_top = 279.9897
+offset_right = 659.88196
+offset_bottom = 349.65845
+
 [node name="Computer" type="Node2D" parent="." unique_id=1803054258]
 script = ExtResource("5_0hoth")
 
@@ -708,5 +757,6 @@ text = "[PROMPT GOES HERE]"
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Distillation/CanvasLayer/Sprite2D/Start" to="Distillation" method="_on_start_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
