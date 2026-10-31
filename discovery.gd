@@ -1,7 +1,7 @@
 extends Node
 
-const possible = ["Pure Water", "Impure Water"] #maybe load these 2 from the inputs and outputs of the recipe resources
-var known: Array[String]
+var possible: Array[String] #list of all possible substances
+var known: Array[String] #list of all substances known by the player
 
 func _ready() -> void:
 	pass

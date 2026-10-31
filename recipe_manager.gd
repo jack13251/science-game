@@ -33,9 +33,14 @@ func load_recipes():
 		if file.ends_with(".tres"):
 
 			var recipe = load("res://Recipes/" + file)
-
+			
 			if recipe is ExperimentRecipe:
 				recipes.append(recipe)
+				if recipe.output not in Discovery.possible:
+					Discovery.possible.append(recipe.output)
+				for i in recipe.inputs:
+					if i not in Discovery.possible:
+						Discovery.possible.append(i)
 
 	print("Loaded recipes: ", recipes.size())
 
