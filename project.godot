@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Recipes="*uid://c6i3tfnxpbbjv"
+RecipeManager="*uid://c6vc1m7a8x0ns"
 
 [editor_plugins]
 
