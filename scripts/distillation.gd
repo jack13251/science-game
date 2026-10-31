@@ -46,3 +46,4 @@ func Experiment() -> void:
 	var recipe = RecipeManager.find_recipe(inputs, apparatus)
 	print("Found Recipe: ", recipe.recipe_name)
 	print("Output: ", recipe.output)
+	Discovery.ammend(recipe.output)

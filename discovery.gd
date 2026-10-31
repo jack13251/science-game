@@ -1,6 +1,6 @@
 extends Node
 
-const possible = ["Pure Water", "Impure Water"]
+const possible = ["Pure Water", "Impure Water"] #maybe load these 2 from the inputs and outputs of the recipe resources
 var known: Array[String]
 
 func _ready() -> void:
