@@ -7,7 +7,7 @@ var recipes: Array[ExperimentRecipe] = []
 func _ready():
 	load_recipes()
 	
-#### TEST of recipe search ###
+### TEST data for recipe search ###
 #	var test_inputs: Array[String] = [
 #		"Impure Water",
 #		]

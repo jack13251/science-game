@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	if near == true:
 		if Input.is_action_just_pressed("Interact"):
 			print("SINK INTERACTED")
+			Discovery.ammend("Impure Water") #ALERT fix
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

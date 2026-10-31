@@ -37,10 +37,12 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 
 func _on_start_pressed() -> void:
-	print("SEARCHING FOR MATCHES")
+	print()
+	print("SEARCHING FOR MATCHES... ")
+	print()
 	Experiment()
 
 func Experiment() -> void:
 	var recipe = RecipeManager.find_recipe(inputs, apparatus)
-	print("Found Recipe:", recipe.recipe_name)
-	print("Output:", recipe.output)
+	print("Found Recipe: ", recipe.recipe_name)
+	print("Output: ", recipe.output)

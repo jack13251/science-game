@@ -11,3 +11,5 @@ class_name ExperimentRecipe
 @export_multiline var description: String
 
 @export var apparatus: String
+
+@export var temperature: String #likely to be just low/med/high CAUTION this is not in the game yet
