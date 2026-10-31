@@ -8,4 +8,5 @@ recipe_name = "Water Distillation"
 inputs = Array[String](["Impure Water"])
 output = "Pure Water"
 description = "Water containing chemical and mineral impurities (such as that from a tap) is heated until it evaporates into steam leaving the impurities behind. The steam is then condensed into pure water."
+equipment = "Distillation Stand"
 metadata/_custom_type_script = "uid://c6i3tfnxpbbjv"

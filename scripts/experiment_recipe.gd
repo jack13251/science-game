@@ -9,3 +9,5 @@ class_name ExperimentRecipe
 @export var output: String
 
 @export_multiline var description: String
+
+@export var equipment: String
