@@ -6,16 +6,19 @@ var recipes: Array[ExperimentRecipe] = []
 
 func _ready():
 	load_recipes()
-#TEST
+	
+#### TEST of recipe search ###
 #	var test_inputs: Array[String] = [
 #		"Impure Water",
 #		]
-#	var result = find_recipe(test_inputs)
+#	var test_apparatus = "Distillation Stand"
+#	var result = find_recipe(test_inputs, test_apparatus)
 #	if result != null:
 #		print("Found recipe: ", result.recipe_name)
 #		print("Output: ", result.output)
 #	else:
 #		print("No recipe found!")
+### END of test ###
 
 func load_recipes():
 
@@ -36,8 +39,10 @@ func load_recipes():
 
 	print("Loaded recipes: ", recipes.size())
 
-func find_recipe(player_inputs: Array[String]) -> ExperimentRecipe:
+func find_recipe(player_inputs: Array[String], player_apparatus: String) -> ExperimentRecipe:
 	for recipe in recipes:
+		if recipe.apparatus != player_apparatus:
+			continue
 		if recipe.inputs.size() != player_inputs.size():
 			continue
 		var inputs_match = true

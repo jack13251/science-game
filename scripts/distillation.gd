@@ -4,9 +4,14 @@ extends Node2D
 
 var near = false
 
+const apparatus = "Distillation Stand"
+var inputs: Array[String]
+var output
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#TEST
+	inputs = ["Impure Water"]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,10 +37,10 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 
 func _on_start_pressed() -> void:
-	#TODO add checks to wnsure all required fields are filled in
+	print("SEARCHING FOR MATCHES")
 	Experiment()
-	print("Run Experiment")
 
 func Experiment() -> void:
-	#TODO make this do something
-	pass
+	var recipe = RecipeManager.find_recipe(inputs, apparatus)
+	print("Found Recipe:", recipe.recipe_name)
+	print("Output:", recipe.output)

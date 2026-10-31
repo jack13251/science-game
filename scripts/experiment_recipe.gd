@@ -10,4 +10,4 @@ class_name ExperimentRecipe
 
 @export_multiline var description: String
 
-@export var equipment: String
+@export var apparatus: String
