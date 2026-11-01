@@ -36,12 +36,13 @@ func load_recipes():
 			
 			if recipe is ExperimentRecipe:
 				recipes.append(recipe)
-				if recipe.output not in Discovery.possible_l: #change to work for all states of matter
+				if recipe.output not in Discovery.possible_l and recipe.state == "Liquid":
 					Discovery.possible_l.append(recipe.output)
-				for i in recipe.inputs:
-					if i not in Discovery.possible_l:
-						Discovery.possible_l.append(i)
-
+				if recipe.output not in Discovery.possible_g and recipe.state == "Gas":
+					Discovery.possible_g.append(recipe.output)
+				if recipe.output not in Discovery.possible_s and recipe.state == "Solid":
+					Discovery.possible_s.append(recipe.output)
+					
 	print("Loaded recipes: ", recipes.size())
 
 func find_recipe(player_inputs: Array[String], player_apparatus: String) -> ExperimentRecipe:
