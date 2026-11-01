@@ -1,7 +1,5 @@
 #CAUTION this is undoubtably a bad way to handle exoermiments. a dedicated, central and modular system would be infinitly better
 
-#TODO add message if input matches output
-#TODO add output showing output if already known or cut this feature if it will be too difficult
 
 extends Node2D
 
@@ -56,7 +54,7 @@ func Experiment() -> void:
 		if recipe.inputs[0] == recipe.output:
 			$Temporary/Label.text = "Repeated distillation of a pure liquid achieves nothing"
 		elif recipe.output not in Discovery.known_l: #only needs to check liquids as distillation only produces liquids
-			$Temporary/Label.text = "You've discovered " + recipe.output
+			$Temporary/Label.text = "You've discovered " + recipe.output + "\n END OF PROTOTYPE - NOTHING ELSE TO DISCOVER"
 		else:
 			$Temporary/Label.text = "You already discovered that"
 		Discovery.ammend(recipe.output)
