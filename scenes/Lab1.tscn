@@ -819,7 +819,6 @@ offset_left = 468.0
 offset_top = 475.0
 offset_right = 616.0
 offset_bottom = 570.0
-text = "TEXT"
 
 [node name="Computer" type="Node2D" parent="." unique_id=1803054258]
 script = ExtResource("5_0hoth")

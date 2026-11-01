@@ -62,6 +62,7 @@ func Experiment() -> void:
 		Discovery.ammend(recipe.output)
 	else:
 		print("No Current Recipe")
+		$Temporary/Label.text = "You must fill in all fields in order to conduct an experiment"
 
 
 
