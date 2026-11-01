@@ -726,6 +726,7 @@ offset_right = 659.88196
 offset_bottom = 349.65845
 
 [node name="Temporary" type="CanvasLayer" parent="Distillation" unique_id=1347497040]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Distillation/Temporary" unique_id=1891746290]
 offset_right = 1158.0
