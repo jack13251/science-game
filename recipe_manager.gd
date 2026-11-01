@@ -36,11 +36,11 @@ func load_recipes():
 			
 			if recipe is ExperimentRecipe:
 				recipes.append(recipe)
-				if recipe.output not in Discovery.possible:
-					Discovery.possible.append(recipe.output)
+				if recipe.output not in Discovery.possible_l: #change to work for all states of matter
+					Discovery.possible_l.append(recipe.output)
 				for i in recipe.inputs:
-					if i not in Discovery.possible:
-						Discovery.possible.append(i)
+					if i not in Discovery.possible_l:
+						Discovery.possible_l.append(i)
 
 	print("Loaded recipes: ", recipes.size())
 

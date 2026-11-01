@@ -847,5 +847,6 @@ text = "[PROMPT GOES HERE]"
 [connection signal="body_entered" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="Distillation/CanvasLayer/Sprite2D/Start" to="Distillation" method="_on_start_pressed"]
+[connection signal="pressed" from="Distillation/Temporary/VBoxContainer/Button" to="Distillation" method="_on_button_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
