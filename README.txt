@@ -10,3 +10,6 @@ Controls:
 -Movement with the arrow keys
 -Interact with 'F'
 -Close menu - 'esc'
+
+
+This game was made in godot using gdScript and is only an early prototype.
