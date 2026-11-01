@@ -1,5 +1,8 @@
 #CAUTION this is undoubtably a bad way to handle exoermiments. a dedicated, central and modular system would be infinitly better
 
+#TODO add message if input matches output
+#TODO add output showing output if already known or cut this feature if it will be too difficult
+
 extends Node2D
 
 var near = false
@@ -58,6 +61,7 @@ func Experiment() -> void:
 
 
 func _on_button_pressed() -> void:
+	inputs.clear()
 	inputs.append($Temporary/VBoxContainer/OptionButton.get_item_text($Temporary/VBoxContainer/OptionButton.selected))
 	Experiment()
 

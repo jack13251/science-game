@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ExperimentRecipe" format=3 uid="uid://dsjs48um0uecg"]
+
+[ext_resource type="Script" uid="uid://c6i3tfnxpbbjv" path="res://scripts/experiment_recipe.gd" id="1_3rqb7"]
+
+[resource]
+script = ExtResource("1_3rqb7")
+recipe_name = "Repeat distill water"
+inputs = Array[String](["Pure Water"])
+output = "Pure Water"
+description = "Repeating a distillation on already pure water just leads to a lower yield of pure water so try to avoid it."
+apparatus = "Distillation Stand"
+temperature = "Medium"
+state = "Liquid"
+metadata/_custom_type_script = "uid://c6i3tfnxpbbjv"
