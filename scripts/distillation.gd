@@ -12,12 +12,10 @@ var inputs: Array[String]
 var output
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if near == true:
 		if Input.is_action_just_pressed("Interact"):
@@ -55,9 +53,17 @@ func Experiment() -> void:
 	if recipe != null:
 		print("Found Recipe: ", recipe.recipe_name)
 		print("Output: ", recipe.output)
+		if recipe.inputs[0] == recipe.output:
+			$Temporary/Label.text = "Repeated distillation of a pure liquid achieves nothing"
+		elif recipe.output not in Discovery.known_l: #only needs to check liquids as distillation only produces liquids
+			$Temporary/Label.text = "You've discovered " + recipe.output
+		else:
+			$Temporary/Label.text = "You already discovered that"
 		Discovery.ammend(recipe.output)
 	else:
 		print("No Current Recipe")
+
+
 
 
 func _on_button_pressed() -> void:

@@ -814,6 +814,13 @@ theme_override_fonts/font = ExtResource("7_v02c1")
 theme_override_font_sizes/font_size = 24
 text = "Run Experiment"
 
+[node name="Label" type="Label" parent="Distillation/Temporary" unique_id=1713825957]
+offset_left = 468.0
+offset_top = 475.0
+offset_right = 616.0
+offset_bottom = 570.0
+text = "TEXT"
+
 [node name="Computer" type="Node2D" parent="." unique_id=1803054258]
 script = ExtResource("5_0hoth")
 
