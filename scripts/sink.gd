@@ -1,6 +1,7 @@
 extends Node2D
 
 var near = false
+
 func _ready() -> void:
 	Discovery.possible_l.append("Impure Water") #manually adds water to possible
 

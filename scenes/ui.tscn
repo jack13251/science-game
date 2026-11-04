@@ -38,6 +38,8 @@ text = "Quest title here"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 19
+max_value = 3.0
+step = 1.0
 
 [node name="Steps" type="Label" parent="CanvasLayer/Quest prompt" unique_id=1418861125]
 layout_mode = 2

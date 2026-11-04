@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 RecipeManager="*uid://c6vc1m7a8x0ns"
 Discovery="*uid://dy4bqd720i1ok"
+QuestManager="*uid://b2w3kibi8mdl3"
 
 [editor_plugins]
 
