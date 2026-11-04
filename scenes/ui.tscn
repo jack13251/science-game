@@ -20,3 +20,17 @@ offset_bottom = 600.0
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 22
 text = "PROMPT HERE"
+
+[node name="Quest prompt" type="VBoxContainer" parent="CanvasLayer" unique_id=12687783]
+offset_left = 864.0
+offset_right = 1152.0
+offset_bottom = 144.0
+
+[node name="Quest" type="Label" parent="CanvasLayer/Quest prompt" unique_id=405941051]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Quest prompt" unique_id=1234121507]
+layout_mode = 2
+
+[node name="Steps" type="Label" parent="CanvasLayer/Quest prompt" unique_id=1418861125]
+layout_mode = 2

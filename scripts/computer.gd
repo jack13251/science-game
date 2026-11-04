@@ -11,18 +11,18 @@ func _process(delta: float) -> void:
 	if near == true:
 		if Input.is_action_just_pressed("Interact"):
 			$CanvasLayer.show()
-			$"../CanvasLayer/Label".hide()
+			$"../UI/CanvasLayer/Interaction Prompt".hide()
 		if Input.is_action_just_pressed("ui_close_dialog"):
 			$CanvasLayer.hide()
-			$"../CanvasLayer/Label".show()
+			$"../UI/CanvasLayer/Interaction Prompt".show()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	$"../CanvasLayer/Label".show()
-	$"../CanvasLayer/Label".text = "Press F to interact with the Computer"
+	$"../UI/CanvasLayer/Interaction Prompt".show()
+	$"../UI/CanvasLayer/Interaction Prompt".text = "Press F to interact with the Computer"
 	near = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	$"../CanvasLayer/Label".hide()
+	$"../UI/CanvasLayer/Interaction Prompt".hide()
 	near = false
