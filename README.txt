@@ -12,4 +12,7 @@ Controls:
 -Close menu - 'esc'
 
 
+Update: There is now a linear quest system that guides the player's progression through the game.
+
+
 This game was made in godot using gdScript and is only an early prototype.
