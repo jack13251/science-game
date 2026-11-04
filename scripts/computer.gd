@@ -1,3 +1,6 @@
+#TODO have a section that tells the player the current number of recipes discoverable at their stage
+#TODO allow upgrading of the lab from the computer (either money needed or quests completed or both)
+
 extends Node2D
 
 var near = false

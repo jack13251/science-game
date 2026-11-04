@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dvw0gu1aiainp"]
 
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://b2w3kibi8mdl3" path="res://scenes/quest_manager.gd" id="2_x4jx1"]
 
 [node name="UI" type="Control" unique_id=122003504]
 layout_mode = 3
@@ -25,12 +26,18 @@ text = "PROMPT HERE"
 offset_left = 864.0
 offset_right = 1152.0
 offset_bottom = 144.0
+script = ExtResource("2_x4jx1")
 
 [node name="Quest" type="Label" parent="CanvasLayer/Quest prompt" unique_id=405941051]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 24
+text = "Quest title here"
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Quest prompt" unique_id=1234121507]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 19
 
 [node name="Steps" type="Label" parent="CanvasLayer/Quest prompt" unique_id=1418861125]
 layout_mode = 2
