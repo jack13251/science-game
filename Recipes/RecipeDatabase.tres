@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeDatabase" format=3 uid="uid://yg6xd4jd5vot"]
+
+[ext_resource type="Script" uid="uid://c6i3tfnxpbbjv" path="res://scripts/experiment_recipe.gd" id="1_1xjcb"]
+[ext_resource type="Script" uid="uid://dvyhqhtp08mpr" path="res://recipe_database.gd" id="2_0nf7j"]
+[ext_resource type="Resource" uid="uid://df54lkqditixe" path="res://Recipes/PureWater.tres" id="2_qht65"]
+[ext_resource type="Resource" uid="uid://dsjs48um0uecg" path="res://Recipes/ALT_PureWater.tres" id="3_gtxlh"]
+
+[resource]
+script = ExtResource("2_0nf7j")
+recipes = Array[ExtResource("1_1xjcb")]([ExtResource("2_qht65"), ExtResource("3_gtxlh")])
+metadata/_custom_type_script = "uid://dvyhqhtp08mpr"

@@ -19,30 +19,29 @@ func _ready():
 #	else:
 #		print("No recipe found!")
 ### END of test ###
-
 func load_recipes():
 
-	var directory = DirAccess.open("res://Recipes")
+	var database: RecipeDatabase = load("res://Recipes/RecipeDatabase.tres")
 
-	if directory == null:
-		print("Could not find Recipes folder!")
+	if database == null:
+		print("Could not load Recipe Database!")
 		return
 
-	for file in directory.get_files():
+	for recipe in database.recipes:
 
-		if file.ends_with(".tres"):
+		if recipe is ExperimentRecipe:
 
-			var recipe = load("res://Recipes/" + file)
-			
-			if recipe is ExperimentRecipe:
-				recipes.append(recipe)
-				if recipe.output not in Discovery.possible_l and recipe.state == "Liquid":
-					Discovery.possible_l.append(recipe.output)
-				if recipe.output not in Discovery.possible_g and recipe.state == "Gas":
-					Discovery.possible_g.append(recipe.output)
-				if recipe.output not in Discovery.possible_s and recipe.state == "Solid":
-					Discovery.possible_s.append(recipe.output)
-					
+			recipes.append(recipe)
+
+			if recipe.output not in Discovery.possible_l and recipe.state == "Liquid":
+				Discovery.possible_l.append(recipe.output)
+
+			if recipe.output not in Discovery.possible_g and recipe.state == "Gas":
+				Discovery.possible_g.append(recipe.output)
+
+			if recipe.output not in Discovery.possible_s and recipe.state == "Solid":
+				Discovery.possible_s.append(recipe.output)
+
 	print("Loaded recipes: ", recipes.size())
 
 func find_recipe(player_inputs: Array[String], player_apparatus: String) -> ExperimentRecipe:

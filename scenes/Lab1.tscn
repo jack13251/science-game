@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b656dsvus6ayq" path="res://assets/temp lab book patch.png" id="6_a5bg7"]
 [ext_resource type="Texture2D" uid="uid://bi1rp85lwsgef" path="res://assets/pixel-art-monitor-computer-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="6_coeus"]
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="7_v02c1"]
+[ext_resource type="PackedScene" uid="uid://dvw0gu1aiainp" path="res://scenes/ui.tscn" id="10_v02c1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_qjypl")
@@ -839,15 +840,10 @@ position = Vector2(585, 318)
 scale = Vector2(1.2517564, 1.2517564)
 texture = ExtResource("6_coeus")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=157632460]
+[node name="UI" parent="." unique_id=122003504 instance=ExtResource("10_v02c1")]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1363440266]
+[node name="Interaction Prompt" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="0" unique_id=523082224]
 visible = false
-offset_left = 462.0
-offset_top = 577.0
-offset_right = 630.0
-offset_bottom = 600.0
-text = "[PROMPT GOES HERE]"
 
 [connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
@@ -857,3 +853,5 @@ text = "[PROMPT GOES HERE]"
 [connection signal="pressed" from="Distillation/Temporary/VBoxContainer/Button" to="Distillation" method="_on_button_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
+
+[editable path="UI"]

@@ -11,16 +11,16 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("Interact"):
 			print("SINK INTERACTED")
 			Discovery.ammend("Impure Water")
-			$"../CanvasLayer/Label".text = "You discovered Impure water. Distill it to progress."
+			$"../UI/CanvasLayer/Interaction Prompt".text = "You discovered Impure water. Distill it to progress."
 
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	$"../CanvasLayer/Label".show()
-	$"../CanvasLayer/Label".text = "Press F to interact with the Sink"
+	$"../UI/CanvasLayer/Interaction Prompt".show()
+	$"../UI/CanvasLayer/Interaction Prompt".text = "Press F to interact with the Sink"
 	near = true
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	$"../CanvasLayer/Label".hide()
+	$"../UI/CanvasLayer/Interaction Prompt".hide()
 	near = false
