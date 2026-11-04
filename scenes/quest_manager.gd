@@ -5,7 +5,6 @@
 extends VBoxContainer
 
 var discoveries_needed = 2
-var count = Discovery.count
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,4 +19,6 @@ func set_quest() -> void:
 	pass
 
 func update_progress() -> void:
-	$ProgressBar.set_value_no_signal(count)
+	print("CALLED")
+	var Bar: ProgressBar =  get_tree().current_scene.get_node("UI/CanvasLayer/Quest prompt/ProgressBar")
+	Bar.set_value_no_signal(Discovery.count)
