@@ -24,7 +24,9 @@ func set_quest() -> void:
 func update_progress() -> void:
 	print("CALLED")
 	var Bar: ProgressBar =  get_tree().current_scene.get_node("UI/CanvasLayer/Quest prompt/ProgressBar")
+	var Steps: Label = get_tree().current_scene.get_node("UI/CanvasLayer/Quest prompt/Steps")
 	Bar.set_value_no_signal(Discovery.count)
 	if Bar.value == Bar.max_value:
 		quests_completed += 1
+		Steps.text = "•Interact with the computer when you're \n ready to progress."
 		set_quest()
