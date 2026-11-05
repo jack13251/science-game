@@ -840,6 +840,28 @@ position = Vector2(585, 318)
 scale = Vector2(1.2517564, 1.2517564)
 texture = ExtResource("6_coeus")
 
+[node name="Upgrade" type="Button" parent="Computer/CanvasLayer" unique_id=1633374819]
+offset_left = 545.0
+offset_top = 235.0
+offset_right = 652.0
+offset_bottom = 266.0
+text = "Upgrade Lab"
+
+[node name="Label" type="Label" parent="Computer/CanvasLayer" unique_id=1409999737]
+offset_left = 528.0
+offset_top = 204.0
+offset_right = 675.0
+offset_bottom = 227.0
+text = "Current lab level: X"
+
+[node name="Label2" type="Label" parent="Computer/CanvasLayer" unique_id=592833099]
+visible = false
+offset_left = 419.0
+offset_top = 279.0
+offset_right = 780.0
+offset_bottom = 302.0
+text = "Complete quest learning the basics to level up!"
+
 [node name="UI" parent="." unique_id=122003504 instance=ExtResource("10_v02c1")]
 
 [node name="Interaction Prompt" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="0" unique_id=523082224]
@@ -864,5 +886,6 @@ text = "	•Interact with the tap
 [connection signal="pressed" from="Distillation/Temporary/VBoxContainer/Button" to="Distillation" method="_on_button_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Computer/CanvasLayer/Upgrade" to="Computer" method="_on_upgrade_pressed"]
 
 [editable path="UI"]
