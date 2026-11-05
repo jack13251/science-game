@@ -7,6 +7,7 @@ extends VBoxContainer
 var quests = [2] #list of discoveries needed at each quest.
 var discoveries_needed = 2
 var quests_completed = 0
+var current_level = 0
 
 
 # Called when the node enters the scene tree for the first time.

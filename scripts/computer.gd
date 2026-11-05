@@ -5,7 +5,6 @@ extends Node2D
 
 var near = false
 var requirements: Array[int] = [1] #quest progress needed to unlock each upgrade
-var current_level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,7 +18,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("Interact"):
 			$CanvasLayer.show()
 			$"../UI/CanvasLayer/Interaction Prompt".hide()
-			$CanvasLayer/Label.text = "Current lab level: " + str(current_level)
+			$CanvasLayer/Label.text = "Current lab level: " + str(QuestManager.current_level)
 		if Input.is_action_just_pressed("ui_close_dialog"):
 			$CanvasLayer.hide()
 			$"../UI/CanvasLayer/Interaction Prompt".show()
@@ -43,6 +42,6 @@ func _on_upgrade_pressed() -> void:
 	if current_requirement == QuestManager.quests_completed:
 		get_tree().change_scene_to_file("res://scenes/Lab 2.tscn")
 		print("Lab Upgraded")
-		current_level += 1
+		QuestManager.current_level += 1
 	else:
 		$CanvasLayer/Label2.show()
