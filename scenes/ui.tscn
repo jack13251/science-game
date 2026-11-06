@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://b2w3kibi8mdl3" path="res://scenes/quest_manager.gd" id="2_x4jx1"]
+[ext_resource type="Script" uid="uid://eysi7guoxanh" path="res://scripts/Menu_Manager.gd" id="3_yev5y"]
 
 [node name="UI" type="Control" unique_id=122003504]
 layout_mode = 3
@@ -14,6 +15,7 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=64283522]
 
 [node name="Interaction Prompt" type="Label" parent="CanvasLayer" unique_id=523082224]
+visible = false
 offset_left = 504.0
 offset_top = 576.0
 offset_right = 602.0
@@ -23,6 +25,7 @@ theme_override_font_sizes/font_size = 22
 text = "PROMPT HERE"
 
 [node name="Quest prompt" type="VBoxContainer" parent="CanvasLayer" unique_id=12687783]
+visible = false
 offset_left = 864.0
 offset_right = 1152.0
 offset_bottom = 144.0
@@ -45,6 +48,7 @@ step = 1.0
 layout_mode = 2
 
 [node name="Box opened popup" type="ColorRect" parent="CanvasLayer" unique_id=372482648]
+visible = false
 offset_left = 360.0
 offset_top = 144.0
 offset_right = 792.0
@@ -72,3 +76,61 @@ offset_top = 241.0
 offset_right = 265.0
 offset_bottom = 280.0
 text = "Thanks!"
+
+[node name="Pause menu" type="Control" parent="CanvasLayer" unique_id=626545087]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 432.0
+offset_top = 144.0
+offset_right = 720.0
+offset_bottom = 432.0
+script = ExtResource("3_yev5y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Pause menu" unique_id=2106082337]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 288.0
+offset_bottom = 324.0
+
+[node name="Resume" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1562589380]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resume"
+
+[node name="Options" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=606807861]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="Save" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1842931656]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Save"
+
+[node name="Main menu" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1138012306]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Main Menu"
+
+[node name="Desktop" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=839295234]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Desktop"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause menu" unique_id=283782354]
+z_index = -1
+layout_mode = 0
+offset_left = -432.0
+offset_top = -144.0
+offset_right = 720.0
+offset_bottom = 504.0
+mouse_filter = 2
+color = Color(0.49019608, 0.49019608, 0.49019608, 0.16078432)
+
+[node name="Settings Menu" type="Control" parent="CanvasLayer" unique_id=744297712]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

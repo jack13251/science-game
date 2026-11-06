@@ -22,11 +22,13 @@ func _process(delta: float) -> void:
 			$Temporary.show()
 			$"../UI/CanvasLayer/Interaction Prompt".hide()
 			update()
+			MenuManager.block = true
 		if Input.is_action_just_pressed("ui_close_dialog"):
 #			$CanvasLayer.hide()
 #			$"../CanvasLayer/Label".show()
 			$Temporary.hide()
 			$"../UI/CanvasLayer/Interaction Prompt".show()
+			MenuManager.block = false
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
