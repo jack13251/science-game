@@ -869,6 +869,9 @@ theme_override_fonts/font = ExtResource("7_tkb1p")
 text = "	•Interact with the tap
 	•Discover 1 new substance"
 
+[node name="Box opened popup" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="2" unique_id=372482648]
+visible = false
+
 [node name="Node2D" parent="." unique_id=1953658773 instance=ExtResource("11_ko6x5")]
 z_index = 5
 position = Vector2(-136, 45)
@@ -887,6 +890,7 @@ shape = SubResource("RectangleShape2D_ko6x5")
 [connection signal="pressed" from="Distillation/Temporary/VBoxContainer/Button" to="Distillation" method="_on_button_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="UI/CanvasLayer/Box opened popup/Button" to="Node2D" method="_on_button_pressed"]
 [connection signal="body_entered" from="Node2D/Area2D" to="Node2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Node2D/Area2D" to="Node2D" method="_on_area_2d_body_exited"]
 

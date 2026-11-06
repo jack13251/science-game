@@ -878,6 +878,9 @@ theme_override_fonts/font = ExtResource("7_v02c1")
 text = "	•Interact with the tap
 	•Discover 1 new substance"
 
+[node name="Box opened popup" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="2" unique_id=372482648]
+visible = false
+
 [connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Distillation/Area2D" to="Distillation" method="_on_area_2d_body_entered"]

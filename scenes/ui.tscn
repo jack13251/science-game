@@ -43,3 +43,32 @@ step = 1.0
 
 [node name="Steps" type="Label" parent="CanvasLayer/Quest prompt" unique_id=1418861125]
 layout_mode = 2
+
+[node name="Box opened popup" type="ColorRect" parent="CanvasLayer" unique_id=372482648]
+offset_left = 360.0
+offset_top = 144.0
+offset_right = 792.0
+offset_bottom = 432.0
+color = Color(0.42595553, 0.42595553, 0.4259555, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Box opened popup" unique_id=1988225740]
+layout_mode = 0
+offset_right = 432.0
+offset_bottom = 216.0
+text = "WORK IN PROGRESS...
+
+The local university has sent you the following items to
+help further your scientific research:
+•
+•
+•
+They have been added to your known substances for 
+use in  your experiments."
+
+[node name="Button" type="Button" parent="CanvasLayer/Box opened popup" unique_id=189919512]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 241.0
+offset_right = 265.0
+offset_bottom = 280.0
+text = "Thanks!"

@@ -1,6 +1,7 @@
 extends Node2D
 
 var near = false
+var done = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +24,9 @@ func _process(delta: float) -> void:
 
 
 func open() -> void:
-	pass
+	$"../UI/CanvasLayer/Box opened popup".show()
+	#TODO add the listed substances to the correct known substances lists and make sure they're in possible also
+	done = true
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -33,3 +36,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	near = false
 	$"../UI/CanvasLayer/Interaction Prompt".hide()
+
+
+func _on_button_pressed() -> void:
+	if done == true:
+		$"../UI/CanvasLayer/Box opened popup".hide()
+		$".".queue_free()
