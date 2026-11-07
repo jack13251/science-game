@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://b2w3kibi8mdl3" path="res://scenes/quest_manager.gd" id="2_x4jx1"]
 [ext_resource type="Script" uid="uid://eysi7guoxanh" path="res://scripts/Menu_Manager.gd" id="3_yev5y"]
+[ext_resource type="Script" uid="uid://f6qkdlgufjsh" path="res://scenes/settings_menu.gd" id="4_gdt2y"]
 
 [node name="UI" type="Control" unique_id=122003504]
 layout_mode = 3
@@ -13,6 +14,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=64283522]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=646507317]
+z_index = 3
+offset_right = 248.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 12
+text = "WORK IN PROGRESS...
+many features are not present
+and some things may not work
+as exprected"
 
 [node name="Interaction Prompt" type="Label" parent="CanvasLayer" unique_id=523082224]
 visible = false
@@ -79,6 +90,7 @@ text = "Thanks!"
 
 [node name="Pause menu" type="Control" parent="CanvasLayer" unique_id=626545087]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 432.0
@@ -106,12 +118,12 @@ text = "Options"
 [node name="Save" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1842931656]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Save"
+text = "Save (not working)"
 
 [node name="Main menu" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1138012306]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Quit to Main Menu"
+text = "Quit to Main Menu (not working)"
 
 [node name="Desktop" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=839295234]
 layout_mode = 2
@@ -129,13 +141,136 @@ mouse_filter = 2
 color = Color(0.09411765, 0.09411765, 0.09411765, 0.70980394)
 
 [node name="Settings Menu" type="Control" parent="CanvasLayer" unique_id=744297712]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("4_gdt2y")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Settings Menu" unique_id=1238806082]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 144.0
+offset_right = 864.0
+offset_bottom = 504.0
+mouse_filter = 2
+color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Settings Menu/ColorRect" unique_id=385127664]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 18.0
+offset_right = 540.0
+offset_bottom = 288.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1904880506]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 22
+text = "Settings Menu"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1892544192]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1682129482]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+text = "Audio:"
+
+[node name="Master" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=750137938]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 12
+text = "Master Volume:"
+
+[node name="Master" type="HSlider" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Master" unique_id=1041977005]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 504.0
+offset_bottom = 16.0
+editable = false
+
+[node name="Music" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=776608823]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 12
+text = "Music Volume:"
+
+[node name="Music" type="HSlider" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Music" unique_id=758169801]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 504.0
+offset_bottom = 16.0
+editable = false
+
+[node name="SFX" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=644315951]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 12
+text = "SFX Volume:"
+
+[node name="SFX" type="HSlider" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/SFX" unique_id=383229162]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 504.0
+offset_bottom = 16.0
+editable = false
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1520310322]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1588503700]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 16
+text = "Display:"
+
+[node name="Disp mode" type="Label" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=2097361281]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 12
+text = "Display Mode:"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Disp mode" unique_id=1496181842]
+layout_mode = 0
+offset_left = 90.0
+offset_top = -4.0
+offset_right = 204.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 12
+disabled = true
+selected = 0
+item_count = 1
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+
+[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1438636728]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Settings Menu/ColorRect" unique_id=751911352]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 306.0
+offset_right = 360.0
+offset_bottom = 342.0
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 20
+text = "Close"
+
+[node name="Label" type="Label" parent="CanvasLayer/Settings Menu/ColorRect" unique_id=1399579095]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 324.0
+offset_right = 108.0
+offset_bottom = 347.0
+text = "V0.0.2"
 
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Resume" to="CanvasLayer/Pause menu" method="_on_resume_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Options" to="CanvasLayer/Pause menu" method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Save" to="CanvasLayer/Pause menu" method="_on_save_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Main menu" to="CanvasLayer/Pause menu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Desktop" to="CanvasLayer/Pause menu" method="_on_desktop_pressed"]
+[connection signal="pressed" from="CanvasLayer/Settings Menu/ColorRect/Button" to="CanvasLayer/Settings Menu" method="_on_button_pressed"]

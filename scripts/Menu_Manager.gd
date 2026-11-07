@@ -21,7 +21,7 @@ func _on_resume_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	$"../Settings Menu".show()
 
 
 func _on_save_pressed() -> void:
