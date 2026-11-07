@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Science Game"
+config/version="0.0.1"
 run/main_scene="uid://gpvakwdoser2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://assets/icon.svg"
@@ -25,7 +26,6 @@ SettingsMenu="*uid://f6qkdlgufjsh"
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
