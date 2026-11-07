@@ -23,6 +23,11 @@ QuestManager="*uid://b2w3kibi8mdl3"
 MenuManager="*uid://eysi7guoxanh"
 SettingsMenu="*uid://f6qkdlgufjsh"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

@@ -233,7 +233,7 @@ theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 12
 text = "Display Mode:"
 
-[node name="OptionButton" type="OptionButton" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Disp mode" unique_id=1496181842]
+[node name="Disp mode" type="OptionButton" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Disp mode" unique_id=1496181842]
 layout_mode = 0
 offset_left = 90.0
 offset_top = -4.0
@@ -241,11 +241,18 @@ offset_right = 204.0
 offset_bottom = 18.0
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 12
-disabled = true
 selected = 0
-item_count = 1
+item_count = 5
 popup/item_0/text = "Windowed"
 popup/item_0/id = 0
+popup/item_1/text = "Minimized"
+popup/item_1/id = 1
+popup/item_2/text = "Maximized"
+popup/item_2/id = 2
+popup/item_3/text = "Fullscreen"
+popup/item_3/id = 3
+popup/item_4/text = "Exclusive Fullscreen"
+popup/item_4/id = 4
 
 [node name="HSeparator3" type="HSeparator" parent="CanvasLayer/Settings Menu/ColorRect/VBoxContainer" unique_id=1438636728]
 layout_mode = 2
@@ -273,4 +280,5 @@ text = "V0.0.2"
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Save" to="CanvasLayer/Pause menu" method="_on_save_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Main menu" to="CanvasLayer/Pause menu" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Pause menu/VBoxContainer/Desktop" to="CanvasLayer/Pause menu" method="_on_desktop_pressed"]
+[connection signal="item_selected" from="CanvasLayer/Settings Menu/ColorRect/VBoxContainer/Disp mode/Disp mode" to="CanvasLayer/Settings Menu" method="_on_disp_mode_item_selected"]
 [connection signal="pressed" from="CanvasLayer/Settings Menu/ColorRect/Button" to="CanvasLayer/Settings Menu" method="_on_button_pressed"]
