@@ -25,15 +25,20 @@ func save_game() -> void:
 
 
 func load_game() -> void:
-
+	#the label wont do anything right now as continuing without a save just makes a new game which is fine but gives the player no info on status
+	var save_status: Label = get_tree().current_scene.get_node("Save status")
+	
 	if not FileAccess.file_exists(SAVE_PATH):
 		print("No save file found!")
+		save_status.show()
 		return
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
 
 	if file == null:
 		print("Failed to open save file!")
+		save_status.text = "AN ERROR OCCURED LOADING YOUR SAVE \n IT MAY BE CORRUPTED"
+		save_status.show()
 		return
 
 	var json_text = file.get_as_text()
@@ -44,6 +49,8 @@ func load_game() -> void:
 
 	if error != OK:
 		print("Failed to parse save file!")
+		$"Save status".text = "AN ERROR OCCURED \n LOADING YOUR SAVE IT MAY BE CORRUPTED"
+		$"Save status".show()
 		return
 
 	var save_data = json.data

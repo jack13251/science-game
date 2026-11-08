@@ -864,9 +864,6 @@ text = "Complete quest learning the basics to level up!"
 
 [node name="UI" parent="." unique_id=122003504 instance=ExtResource("10_v02c1")]
 
-[node name="Interaction Prompt" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="0" unique_id=523082224]
-visible = false
-
 [node name="Quest" parent="UI/CanvasLayer/Quest prompt" parent_id_path=PackedInt32Array(122003504, 12687783) index="0" unique_id=405941051]
 text = "Learn the basics"
 
@@ -877,9 +874,6 @@ max_value = 2.0
 theme_override_fonts/font = ExtResource("7_v02c1")
 text = "	•Interact with the tap
 	•Discover 1 new substance"
-
-[node name="Box opened popup" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="2" unique_id=372482648]
-visible = false
 
 [connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]

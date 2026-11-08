@@ -44,11 +44,13 @@ func load_recipes():
 
 	print("Loaded recipes: ", recipes.size())
 
-func find_recipe(player_inputs: Array[String], player_apparatus: String) -> ExperimentRecipe:
+func find_recipe(player_inputs: Array[String], player_apparatus: String, player_temp: String) -> ExperimentRecipe:
 	for recipe in recipes:
 		if recipe.apparatus != player_apparatus:
 			continue
 		if recipe.inputs.size() != player_inputs.size():
+			continue
+		if recipe.temperature != player_temp:
 			continue
 		var inputs_match = true
 		for input in recipe.inputs:

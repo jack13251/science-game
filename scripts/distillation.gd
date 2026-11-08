@@ -7,6 +7,7 @@ var near = false
 
 const apparatus = "Distillation Stand"
 var inputs: Array[String]
+var temperature: String
 var output
 
 
@@ -46,10 +47,10 @@ func _on_start_pressed() -> void:
 	print()
 	print("SEARCHING FOR MATCHES... ")
 	print()
-	Experiment()
+
 
 func Experiment() -> void:
-	var recipe = RecipeManager.find_recipe(inputs, apparatus)
+	var recipe = RecipeManager.find_recipe(inputs, apparatus, temperature)
 	if recipe != null:
 		print("Found Recipe: ", recipe.recipe_name)
 		print("Output: ", recipe.output)
@@ -70,8 +71,10 @@ func Experiment() -> void:
 func _on_button_pressed() -> void:
 	inputs.clear()
 	inputs.append($Temporary/VBoxContainer/OptionButton.get_item_text($Temporary/VBoxContainer/OptionButton.selected))
+	temperature = $Temporary/VBoxContainer/OptionButton2.get_item_text($Temporary/VBoxContainer/OptionButton2.selected)
 	Experiment()
-
+	
+	
 func update() -> void:
 	$Temporary/VBoxContainer/OptionButton.clear()
 	$Temporary/VBoxContainer/OptionButton.add_separator("Select Input")

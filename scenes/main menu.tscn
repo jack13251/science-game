@@ -55,7 +55,7 @@ text = "Options"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "Credits (NOT WORKING)"
+text = "Credits"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=982403896]
 layout_mode = 2
@@ -77,6 +77,19 @@ offset_right = 864.0
 offset_bottom = 465.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Save status" type="Label" parent="." unique_id=765485417]
+visible = false
+layout_mode = 0
+offset_left = 522.0
+offset_top = 504.0
+offset_right = 647.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("1_5hgee")
+theme_override_font_sizes/font_size = 24
+text = "No save found!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
