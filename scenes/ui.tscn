@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b2w3kibi8mdl3" path="res://scenes/quest_manager.gd" id="2_x4jx1"]
 [ext_resource type="Script" uid="uid://eysi7guoxanh" path="res://scripts/Menu_Manager.gd" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://f6qkdlgufjsh" path="res://scenes/settings_menu.gd" id="4_gdt2y"]
+[ext_resource type="Theme" uid="uid://xm362b0u571a" path="res://assets/button theme.tres" id="4_wm3ai"]
 
 [node name="UI" type="Control" unique_id=122003504]
 layout_mode = 3
@@ -115,26 +116,37 @@ offset_bottom = 324.0
 [node name="Resume" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1562589380]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("4_wm3ai")
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 21
 text = "Resume"
 
 [node name="Options" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=606807861]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 21
 text = "Options"
 
 [node name="Save" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1842931656]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Save (not working)"
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 21
+text = "Save"
 
 [node name="Main menu" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=1138012306]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Quit to Main Menu (not working)"
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 21
+text = "Quit to Main Menu"
 
 [node name="Desktop" type="Button" parent="CanvasLayer/Pause menu/VBoxContainer" unique_id=839295234]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 21
 text = "Quit to Desktop"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause menu" unique_id=283782354]

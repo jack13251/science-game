@@ -55,7 +55,7 @@ text = "Options"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "Credits"
+text = "Credits (NOT WORKING)"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=982403896]
 layout_mode = 2

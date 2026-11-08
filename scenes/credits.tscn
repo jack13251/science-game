@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://5rva33wx263k"]
+
+[ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://hky5q5crc2mn" path="res://scenes/credits.gd" id="1_2ckv8"]
+
+[node name="Control" type="Control" unique_id=1467848879]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ckv8")
+
+[node name="Label" type="Label" parent="." unique_id=1142559261]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 198.0
+offset_right = 920.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("1_0bpdh")
+theme_override_font_sizes/font_size = 32
+text = "Science lab assets by: Pixels On Ultra (available from itch.io)
+Box asset: Onino_ (available free on itch.io)
+Everything else: Me
+
+
+No AI has been used in any way in the making of this game"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1693493280]
+self_modulate = Color(1, 1, 1, 0.98039216)
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("1_0bpdh")
+theme_override_font_sizes/font_size = 32
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
