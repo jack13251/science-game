@@ -25,7 +25,7 @@ func _on_options_pressed() -> void:
 
 
 func _on_save_pressed() -> void:
-	pass # Replace with function body.
+	SaveManager.save_game()
 
 
 func _on_main_menu_pressed() -> void:

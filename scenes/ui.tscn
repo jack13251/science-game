@@ -36,7 +36,6 @@ theme_override_font_sizes/font_size = 22
 text = "PROMPT HERE"
 
 [node name="Quest prompt" type="VBoxContainer" parent="CanvasLayer" unique_id=12687783]
-visible = false
 offset_left = 864.0
 offset_right = 1152.0
 offset_bottom = 144.0
@@ -142,6 +141,7 @@ color = Color(0.09411765, 0.09411765, 0.09411765, 0.70980394)
 
 [node name="Settings Menu" type="Control" parent="CanvasLayer" unique_id=744297712]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

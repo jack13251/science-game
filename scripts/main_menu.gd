@@ -1,7 +1,6 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MenuManager.block = true
 	$"UI/CanvasLayer/Pause menu".block = true
@@ -9,12 +8,13 @@ func _ready() -> void:
 	$UI/CanvasLayer/Label.hide()
 	$"UI/CanvasLayer/Quest prompt".hide()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	$"UI/CanvasLayer/Pause menu".PROCESS_MODE_DISABLED
 
+
 func _on_continue_pressed() -> void:
-	pass #TODO load game and open to most recent lab
+	SaveManager.load_game()
 
 
 func _on_new_game_pressed() -> void:
@@ -26,7 +26,7 @@ func _on_options_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
-	pass # Replace with function body.
+	pass # Replace with credits
 
 
 func _on_quit_pressed() -> void:
