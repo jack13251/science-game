@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://btajf38dw6y0w"]
 
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="1_5hgee"]
+[ext_resource type="Script" uid="uid://dynng0ytaccpy" path="res://scripts/main_menu.gd" id="1_xsilq"]
+[ext_resource type="PackedScene" uid="uid://dvw0gu1aiainp" path="res://scenes/ui.tscn" id="3_12vek"]
 
 [node name="Control" type="Control" unique_id=1520176628]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xsilq")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=379873802]
 layout_mode = 0
@@ -30,32 +33,56 @@ horizontal_alignment = 1
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1764550858]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1414499660]
+[node name="Continue" type="Button" parent="VBoxContainer" unique_id=1414499660]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "Continue"
+text = "Continue (no save to continue from)"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1753541133]
+[node name="New Game" type="Button" parent="VBoxContainer" unique_id=1753541133]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "New Game"
+text = "New Game (use this)"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=501979935]
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=501979935]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
 text = "Options"
 
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=909430547]
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=909430547]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
 text = "Credits"
 
-[node name="Button5" type="Button" parent="VBoxContainer" unique_id=982403896]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=982403896]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
 text = "Quit to Desktop"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer" unique_id=1256283148]
+layout_mode = 2
+
+[node name="UI" parent="." unique_id=122003504 instance=ExtResource("3_12vek")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 288.0
+offset_top = 465.0
+offset_right = 864.0
+offset_bottom = 465.0
+
+[node name="Settings Menu" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="5" unique_id=744297712]
+visible = false
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+
+[editable path="UI"]
