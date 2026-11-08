@@ -15,6 +15,10 @@ func _process(delta: float) -> void:
 
 func _on_continue_pressed() -> void:
 	SaveManager.load_game()
+	if QuestManager.current_level == 0: #lab number offset by 1
+		get_tree().change_scene_to_file("res://scenes/Lab1.tscn")
+	elif QuestManager.current_level == 1:
+		get_tree().change_scene_to_file("res://scenes/Lab 2.tscn")
 
 
 func _on_new_game_pressed() -> void:

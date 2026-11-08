@@ -5,10 +5,11 @@ const SAVE_PATH = "user://savegame.json"
 func save_game() -> void:
 
 	var save_data = {
-		"discovered_liquids": [Discovery.known_l],
-		"discovered_solids": [Discovery.known_s],
-		"discovered_gases": [Discovery.known_g],
-		"lab": [QuestManager.current_level]
+		"discovered_liquids": Discovery.known_l,
+		"discovered_solids": Discovery.known_s,
+		"discovered_gases": Discovery.known_g,
+		"lab": QuestManager.current_level,
+		"quests_completed": QuestManager.quests_completed
 	}
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -49,3 +50,11 @@ func load_game() -> void:
 
 	print("Game loaded!")
 	print(save_data)
+	
+	save_data = json.data
+
+	Discovery.known_l.append_array(save_data["discovered_liquids"])
+	Discovery.known_s.append_array(save_data["discovered_solids"])
+	Discovery.known_g.append_array(save_data["discovered_gases"])
+	QuestManager.current_level = save_data["lab"]
+	QuestManager.quests_completed = save_data["quests_completed"]
