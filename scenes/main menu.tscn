@@ -37,13 +37,13 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "Continue (no save to continue from)"
+text = "Continue Game"
 
 [node name="New Game" type="Button" parent="VBoxContainer" unique_id=1753541133]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_5hgee")
 theme_override_font_sizes/font_size = 24
-text = "New Game (use this)"
+text = "New Game"
 
 [node name="Options" type="Button" parent="VBoxContainer" unique_id=501979935]
 layout_mode = 2
@@ -75,9 +75,8 @@ offset_left = 288.0
 offset_top = 465.0
 offset_right = 864.0
 offset_bottom = 465.0
-
-[node name="Settings Menu" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="5" unique_id=744297712]
-visible = false
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
