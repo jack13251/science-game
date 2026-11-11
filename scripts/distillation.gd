@@ -57,7 +57,7 @@ func Experiment() -> void:
 		if recipe.inputs[0] == recipe.output:
 			$Temporary/Label.text = "Repeated distillation of a pure liquid achieves nothing"
 		elif recipe.output not in Discovery.known_l: #only needs to check liquids as distillation only produces liquids
-			$Temporary/Label.text = "You've discovered " + recipe.output + "\n END OF PROTOTYPE - NOTHING ELSE TO DISCOVER"
+			$Temporary/Label.text = "You've discovered " + recipe.output
 		else:
 			$Temporary/Label.text = "You already discovered that"
 		Discovery.ammend(recipe.output)
