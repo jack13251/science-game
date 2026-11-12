@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://gsn8af6fbx4w"]
+
+[ext_resource type="Script" uid="uid://b1tf0i71gv66l" path="res://scenes/enemy path follow.gd" id="1_nb0t0"]
+[ext_resource type="Texture2D" uid="uid://by4nc7qaflvmr" path="res://assets/icon.svg" id="2_n665k"]
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=945871237]
+script = ExtResource("1_nb0t0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231541971]
+texture = ExtResource("2_n665k")

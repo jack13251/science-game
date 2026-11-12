@@ -2,12 +2,31 @@
 
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_pirgh"]
 [ext_resource type="TileSet" uid="uid://d00i2esvxpjfe" path="res://assets/scary tiles.tres" id="2_fcvi8"]
+[ext_resource type="PackedScene" uid="uid://gsn8af6fbx4w" path="res://scenes/enemy1.tscn" id="3_fcvi8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pirgh"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcvi8"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q5wlh"]
+normal = Vector2(0, 1)
+distance = 128.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pnr2r"]
+normal = Vector2(1, 0)
+
+[sub_resource type="Curve2D" id="Curve2D_pirgh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -256, 96, 0, 0, 0, 0, 1504, 96, 0, 0, 0, 0, 1504, -224)
+}
+point_count = 3
 
 [node name="Node2D" type="Node2D" unique_id=1547801180]
 
 [node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_pirgh")]
 z_index = 1
-position = Vector2(-434, -285)
+position = Vector2(256, 192)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1867034977]
 position = Vector2(559, 245)
@@ -20,5 +39,31 @@ tile_map_data = PackedByteArray("AAABAAEAAAACAAQAAAACAAEAAAACAAQAAAADAAEAAAACAAQ
 tile_set = ExtResource("2_fcvi8")
 
 [node name="Foreground" type="TileMapLayer" parent="Background" unique_id=1229645215]
-tile_map_data = PackedByteArray("AAABAAAAAAAMAC4AAAAJAAAAAAAMAC4AAAARAAAAAAAMAC4AAAAZAAAAAAAMAC4AAAAhAAAAAAAMAC4AAAABAAYAAAACAAgAAAACAAYAAAACAAgAAAADAAYAAAACAAgAAAAEAAYAAAACAAgAAAAFAAYAAAACAAgAAAAGAAYAAAACAAgAAAAHAAYAAAACAAgAAAAIAAYAAAACAAgAAAAJAAYAAAACAAgAAAAKAAYAAAACAAgAAAALAAYAAAACAAgAAAAMAAYAAAACAAgAAAANAAYAAAACAAgAAAAOAAYAAAACAAgAAAAPAAYAAAACAAgAAAAQAAYAAAACAAgAAAARAAYAAAACAAgAAAASAAYAAAACAAgAAAATAAYAAAACAAgAAAAUAAYAAAACAAgAAAAVAAYAAAACAAgAAAAWAAYAAAACAAgAAAAXAAYAAAACAAgAAAAYAAYAAAACAAgAAAAZAAYAAAACAAgAAAAaAAYAAAACAAgAAAAbAAYAAAACAAgAAAAcAAYAAAACAAgAAAAdAAYAAAACAAgAAAAeAAYAAAACAAgAAAAfAAYAAAACAAgAAAAgAAYAAAACAAgAAAAhAAYAAAACAAgAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAAAMAC4AAAAJAAAAAAAMAC4AAAARAAAAAAAMAC4AAAAZAAAAAAAMAC4AAAAhAAAAAAAMAC4AAAABAAYAAAAMABMAAAACAAYAAAACAAgAAAADAAYAAAACAAgAAAAEAAYAAAACAAgAAAAFAAYAAAACAAgAAAAGAAYAAAACAAgAAAAHAAYAAAACAAgAAAAIAAYAAAACAAgAAAAJAAYAAAACAAgAAAAKAAYAAAACAAgAAAALAAYAAAACAAgAAAAMAAYAAAACAAgAAAANAAYAAAACAAgAAAAOAAYAAAACAAgAAAAPAAYAAAACAAgAAAAQAAYAAAACAAgAAAARAAYAAAACAAgAAAASAAYAAAACAAgAAAATAAYAAAACAAgAAAAUAAYAAAACAAgAAAAVAAYAAAACAAgAAAAWAAYAAAACAAgAAAAXAAYAAAACAAgAAAAYAAYAAAACAAgAAAAZAAYAAAACAAgAAAAaAAYAAAACAAgAAAAbAAYAAAACAAgAAAAcAAYAAAACAAgAAAAdAAYAAAADAAgAAAAdAAUAAAAHAAgAAAAdAAIAAAAHAAgAAAAdAAMAAAAHAAgAAAAdAAQAAAAHAAgAAAAdAAAAAAAIAC4AAAAdAAEAAAAIAC8AAAA=")
 tile_set = ExtResource("2_fcvi8")
+
+[node name="World Borders" type="StaticBody2D" parent="." unique_id=1437571227]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Borders" unique_id=1335226862]
+position = Vector2(2176, 384)
+shape = SubResource("WorldBoundaryShape2D_pirgh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World Borders" unique_id=466873471]
+position = Vector2(1344, 704)
+shape = SubResource("WorldBoundaryShape2D_fcvi8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World Borders" unique_id=517735474]
+position = Vector2(960, -40)
+shape = SubResource("WorldBoundaryShape2D_q5wlh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World Borders" unique_id=1138768147]
+position = Vector2(64, 320)
+shape = SubResource("WorldBoundaryShape2D_pnr2r")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=174347283]
+top_level = true
+position = Vector2(384, 320)
+curve = SubResource("Curve2D_pirgh")
+
+[node name="PathFollow2D" parent="Path2D" unique_id=945871237 instance=ExtResource("3_fcvi8")]
+position = Vector2(-256, 96)
