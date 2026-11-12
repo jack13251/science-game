@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_pirgh"]
 [ext_resource type="TileSet" uid="uid://d00i2esvxpjfe" path="res://assets/scary tiles.tres" id="2_fcvi8"]
 [ext_resource type="PackedScene" uid="uid://gsn8af6fbx4w" path="res://scenes/enemy1.tscn" id="3_fcvi8"]
+[ext_resource type="Script" uid="uid://c16v5sx2kf2n3" path="res://scenes/enemy target.gd" id="3_pnr2r"]
 [ext_resource type="Script" uid="uid://b1tf0i71gv66l" path="res://scenes/enemy path follow.gd" id="3_q5wlh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5wlh"]
-size = Vector2(64, 101)
+size = Vector2(64, 133)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pirgh"]
 normal = Vector2(-1, 0)
@@ -27,6 +28,7 @@ _data = {
 point_count = 3
 
 [node name="Node2D" type="Node2D" unique_id=1547801180]
+script = ExtResource("3_pnr2r")
 
 [node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_pirgh")]
 z_index = 1
@@ -46,10 +48,10 @@ tile_set = ExtResource("2_fcvi8")
 tile_map_data = PackedByteArray("AAABAAAAAAAMAC4AAAAJAAAAAAAMAC4AAAARAAAAAAAMAC4AAAAZAAAAAAAMAC4AAAAhAAAAAAAMAC4AAAABAAYAAAAMABMAAAACAAYAAAACAAgAAAADAAYAAAACAAgAAAAEAAYAAAACAAgAAAAFAAYAAAACAAgAAAAGAAYAAAACAAgAAAAHAAYAAAACAAgAAAAIAAYAAAACAAgAAAAJAAYAAAACAAgAAAAKAAYAAAACAAgAAAALAAYAAAACAAgAAAAMAAYAAAACAAgAAAANAAYAAAACAAgAAAAOAAYAAAACAAgAAAAPAAYAAAACAAgAAAAQAAYAAAACAAgAAAARAAYAAAACAAgAAAASAAYAAAACAAgAAAATAAYAAAACAAgAAAAUAAYAAAACAAgAAAAVAAYAAAACAAgAAAAWAAYAAAACAAgAAAAXAAYAAAACAAgAAAAYAAYAAAACAAgAAAAZAAYAAAACAAgAAAAaAAYAAAACAAgAAAAbAAYAAAACAAgAAAAcAAYAAAACAAgAAAAdAAYAAAADAAgAAAAdAAUAAAAHAAgAAAAdAAIAAAAHAAgAAAAdAAMAAAAHAAgAAAAdAAQAAAAHAAgAAAAdAAAAAAAIAC4AAAAdAAEAAAAIAC8AAAA=")
 tile_set = ExtResource("2_fcvi8")
 
-[node name="Area2D" type="Area2D" parent="Background/Foreground" unique_id=587963895]
+[node name="Door" type="Area2D" parent="Background/Foreground" unique_id=587963895]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Foreground/Area2D" unique_id=289601775]
-position = Vector2(1888, 77.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Foreground/Door" unique_id=289601775]
+position = Vector2(1888, 93.5)
 shape = SubResource("RectangleShape2D_q5wlh")
 
 [node name="World Borders" type="StaticBody2D" parent="." unique_id=1437571227]
@@ -80,4 +82,12 @@ enemy_scene = ExtResource("3_fcvi8")
 [node name="Enemy1" type="Timer" parent="Path2D" unique_id=339613849]
 autostart = true
 
+[node name="Label" type="Label" parent="." unique_id=1769814240]
+offset_left = 1952.0
+offset_top = 32.0
+offset_right = 1993.0
+offset_bottom = 55.0
+text = "HEALTH❤️"
+
+[connection signal="area_entered" from="Background/Foreground/Door" to="." method="_on_door_area_entered"]
 [connection signal="timeout" from="Path2D/Enemy1" to="Path2D" method="_on_enemy_1_timeout"]

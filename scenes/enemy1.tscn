@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://drx0fb8lbega" path="res://scenes/path follow.gd" id="1_nb0t0"]
 [ext_resource type="Texture2D" uid="uid://by4nc7qaflvmr" path="res://assets/icon.svg" id="2_n665k"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb0t0"]
+size = Vector2(128, 128)
+
 [node name="PathFollow2D" type="PathFollow2D" unique_id=945871237]
 rotates = false
 loop = false
@@ -11,3 +14,8 @@ script = ExtResource("1_nb0t0")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231541971]
 self_modulate = Color(1, 0, 0, 1)
 texture = ExtResource("2_n665k")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=929931698]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=2101319009]
+shape = SubResource("RectangleShape2D_nb0t0")

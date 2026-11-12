@@ -1,5 +1,6 @@
 extends PathFollow2D
 
+var health = 100 #starting health of this enemy 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
