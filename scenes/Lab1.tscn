@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b656dsvus6ayq" path="res://assets/temp lab book patch.png" id="6_a5bg7"]
 [ext_resource type="Texture2D" uid="uid://bi1rp85lwsgef" path="res://assets/pixel-art-monitor-computer-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="6_coeus"]
 [ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="7_v02c1"]
+[ext_resource type="Script" uid="uid://b6sfm843y603x" path="res://scenes/door.gd" id="10_3oiiy"]
 [ext_resource type="PackedScene" uid="uid://dvw0gu1aiainp" path="res://scenes/ui.tscn" id="10_v02c1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qjypl"]
@@ -31,6 +32,9 @@ load_path = "res://.godot/imported/temp lab book patch.png-e2db1d6648775734c3355
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hoth"]
 size = Vector2(13.513515, 53.51351)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwgkr"]
+size = Vector2(55, 84)
 
 [node name="Node2D" type="Node2D" unique_id=1735809296]
 
@@ -278,6 +282,15 @@ offset_right = 780.0
 offset_bottom = 302.0
 text = "Complete quest learning the basics to level up!"
 
+[node name="Door" type="Node2D" parent="." unique_id=1932079209]
+script = ExtResource("10_3oiiy")
+
+[node name="Area2D" type="Area2D" parent="Door" unique_id=312425436]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D" unique_id=436532657]
+position = Vector2(347, -137)
+shape = SubResource("RectangleShape2D_xwgkr")
+
 [node name="UI" parent="." unique_id=122003504 instance=ExtResource("10_v02c1")]
 
 [node name="Quest" parent="UI/CanvasLayer/Quest prompt" parent_id_path=PackedInt32Array(122003504, 12687783) index="0" unique_id=405941051]
@@ -300,5 +313,7 @@ text = "	•Interact with the tap
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="Computer/CanvasLayer/Upgrade" to="Computer" method="_on_upgrade_pressed"]
+[connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Door/Area2D" to="Door" method="_on_area_2d_body_exited"]
 
 [editable path="UI"]

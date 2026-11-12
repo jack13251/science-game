@@ -9,4 +9,5 @@ loop = false
 script = ExtResource("1_nb0t0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231541971]
+self_modulate = Color(1, 0, 0, 1)
 texture = ExtResource("2_n665k")
