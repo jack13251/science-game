@@ -1,11 +1,17 @@
-extends PathFollow2D
+extends Path2D
 
+@export var enemy_scene: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Enemy1.wait_time = 5
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$".".progress += 100 * delta
+	pass
+
+
+func _on_enemy_1_timeout() -> void:
+	var enemy = enemy_scene.instantiate()
+	$".".add_child(enemy)

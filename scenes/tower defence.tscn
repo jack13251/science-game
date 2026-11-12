@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_pirgh"]
 [ext_resource type="TileSet" uid="uid://d00i2esvxpjfe" path="res://assets/scary tiles.tres" id="2_fcvi8"]
 [ext_resource type="PackedScene" uid="uid://gsn8af6fbx4w" path="res://scenes/enemy1.tscn" id="3_fcvi8"]
+[ext_resource type="Script" uid="uid://b1tf0i71gv66l" path="res://scenes/enemy path follow.gd" id="3_q5wlh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pirgh"]
 normal = Vector2(-1, 0)
@@ -64,6 +65,13 @@ shape = SubResource("WorldBoundaryShape2D_pnr2r")
 top_level = true
 position = Vector2(384, 320)
 curve = SubResource("Curve2D_pirgh")
+script = ExtResource("3_q5wlh")
+enemy_scene = ExtResource("3_fcvi8")
 
-[node name="PathFollow2D" parent="Path2D" unique_id=945871237 instance=ExtResource("3_fcvi8")]
+[node name="Enemy 1" parent="Path2D" unique_id=945871237 instance=ExtResource("3_fcvi8")]
 position = Vector2(-256, 96)
+
+[node name="Enemy1" type="Timer" parent="Path2D" unique_id=339613849]
+autostart = true
+
+[connection signal="timeout" from="Path2D/Enemy1" to="Path2D" method="_on_enemy_1_timeout"]
