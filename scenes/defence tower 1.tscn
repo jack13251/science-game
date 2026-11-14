@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://byd0e46bjoi05"]
 
-[ext_resource type="Texture2D" uid="uid://cwrgb4py5rtq8" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tiles/4x/animated/tesla_coil_idle.png" id="1_0rsxo"]
+[ext_resource type="Texture2D" uid="uid://cuowpfsfbqyr7" path="res://assets/Science_Lab_Tileset/Secret_Underground_Lab/tiles/4x/animated/tesla_coil_idle.png" id="1_0rsxo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oxla2"]
-atlas = ExtResource("1_0rsxo")
+[node name="Sprite2D" type="Node2D" unique_id=850168884]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=1813120754]
-texture = SubResource("AtlasTexture_oxla2")
+[node name="Node2D" type="Sprite2D" parent="." unique_id=2019113493]
+texture = ExtResource("1_0rsxo")

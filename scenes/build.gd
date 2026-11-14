@@ -3,7 +3,7 @@ extends Node2D
 @export var Buildings: Array[PackedScene]
 
 var build_mode = false
-var selected_building
+var selected_building: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 			print("BUILD SELECTION 1")
 			selected_building = Buildings[0].instantiate()
 			$".".add_child(selected_building)
+			selected_building.global_position = $"../CharacterBody2D".global_position + Vector2(559, 243)
+			#(559, 243)
 
 
 func Build() -> void:
