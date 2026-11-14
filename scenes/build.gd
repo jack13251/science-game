@@ -2,7 +2,8 @@ extends Node2D
 
 @export var Buildings: Array[PackedScene]
 
-var building = false
+var build_mode = false
+var selected_building
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,15 +13,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Build_Mode"):
-		Build()
+		print("BUILD MODE")
+		build_mode = true
+	if build_mode == true:
+		if Input.is_action_just_pressed("one"):
+			print("BUILD SELECTION 1")
+			selected_building = Buildings[0].instantiate()
+			$".".add_child(selected_building)
 
 
 func Build() -> void:
-	building = true
-	print("BUILD MODE")
-	while building == true:
-		if Input.is_action_just_pressed("one"):
-			print("BUILD ONE")
-			
-		if Input.is_action_just_pressed("ui_cancel"):
-			building = false
+	pass
