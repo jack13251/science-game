@@ -29,5 +29,6 @@ func update_progress() -> void:
 	Bar.set_value_no_signal(Discovery.count)
 	if Bar.value == Bar.max_value:
 		quests_completed += 1
-		Steps.text = "•Interact with the computer when you're \n ready to progress."
+		Steps.text = "•Interact with the door to enter the hallway \n and press '1' to place buildings.
+		•Interact with the computer when you're \n ready to progress."
 		set_quest()
