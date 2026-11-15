@@ -5,6 +5,8 @@ extends Node2D
 
 @export var health = 100 #NOTE a value as high as this (100) should only be used if health persits across rounds and does not reset.
 
+var near = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"Label".text = "❤️ " + str(health)
@@ -14,8 +16,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if health <= 0:
 		game_lost()
-#	if Input.is_action_just_pressed("Build_Mode"):
-#		Build()
+	if near == true:
+		$"UI/CanvasLayer/Interaction Prompt".text = "Press 'F' to return to the lab"
+		$"UI/CanvasLayer/Interaction Prompt".show()
+		if Input.is_action_just_pressed("Interact"):
+			get_tree().change_scene_to_file("res://scenes/Lab1.tscn")
 
 
 
@@ -28,5 +33,10 @@ func game_lost() -> void:
 	$"Label".text = "Round Lost"
 
 
-func Build() -> void: #grid build system 64x64 for placing defence structures
-	pass
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	near = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	near = false
+	$"UI/CanvasLayer/Interaction Prompt".hide()
