@@ -3,7 +3,7 @@
 
 extends Node2D
 
-var health = 3 #CAUTION set to real value after testing 
+@export var health = 100 #NOTE a value as high as this (100) should only be used if health persits across rounds and does not reset.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

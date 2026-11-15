@@ -75,5 +75,8 @@ func _on_button_pressed() -> void:
 	choice = $Control/ColorRect/OptionButton.selected - 1
 	if choice > -1:
 		Damage = RecipeManager.recipes[choice].damage
+	else:
+		print("NO CHOICE MADE")
+		Damage = 0
 	$Control.hide()
 	print(Damage)
