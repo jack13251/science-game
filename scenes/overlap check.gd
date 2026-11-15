@@ -2,10 +2,24 @@ extends Node2D
 
 var valid = true
 
+#starting tower stats
+@export_category("Stats")
+@export var Cooldown: float = 0.5
+@export var Damage: float = 3
+@export var Type: String = "N/A" #not yet in the game
+@export var Range_multiplier: float = 1
+
+var timer: Timer
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
+	timer = $Node2D/Cooldown
+	timer.one_shot = false
+	timer.wait_time = Cooldown
+	timer.autostart = true
+	if timer.is_stopped():
+		timer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,3 +28,14 @@ func _process(delta: float) ->void:
 		$".".queue_free()
 
  
+func _on_cooldown_timeout() -> void:
+	print("timeout")
+	var targets: Array[Area2D] = $Node2D/Range.get_overlapping_areas()
+	print(targets)
+	if len(targets) == 0:
+		return
+	var choice: int = randi_range(0, len(targets) - 1)
+	var enemy: Node2D = targets[choice].get_parent()
+	print(enemy)
+#	targets = []
+#	enemy = null

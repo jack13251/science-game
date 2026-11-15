@@ -4,10 +4,14 @@
 [ext_resource type="Script" uid="uid://nv6rf2ejvvye" path="res://scenes/overlap check.gd" id="1_oxla2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rsxo"]
-size = Vector2(30, 104)
+size = Vector2(30, 85)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oxla2"]
+radius = 256.0
 
 [node name="Sprite2D" type="Node2D" unique_id=850168884]
 script = ExtResource("1_oxla2")
+Cooldown = 1.0
 
 [node name="Node2D" type="Sprite2D" parent="." unique_id=2019113493]
 texture = ExtResource("1_0rsxo")
@@ -17,4 +21,18 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=864475261]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_0rsxo")
+
+[node name="Range" type="Area2D" parent="Node2D" unique_id=445984184]
+collision_layer = 4
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Range" unique_id=556363661]
+shape = SubResource("CircleShape2D_oxla2")
+
+[node name="Cooldown" type="Timer" parent="Node2D" unique_id=2025122386]
+one_shot = true
+
+[connection signal="timeout" from="Node2D/Cooldown" to="." method="_on_cooldown_timeout"]

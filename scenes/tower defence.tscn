@@ -29,6 +29,12 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h136g"]
+size = Vector2(1861, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft371"]
+size = Vector2(69, 256)
+
 [node name="Node2D" type="Node2D" unique_id=1547801180]
 script = ExtResource("3_pnr2r")
 
@@ -83,6 +89,18 @@ enemy_scene = ExtResource("3_fcvi8")
 
 [node name="Enemy1" type="Timer" parent="Path2D" unique_id=339613849]
 autostart = true
+
+[node name="Area2D" type="Area2D" parent="Path2D" unique_id=1354808661]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/Area2D" unique_id=304013569]
+position = Vector2(610.5, 94.5)
+shape = SubResource("RectangleShape2D_h136g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Path2D/Area2D" unique_id=501381233]
+position = Vector2(1506.5, -64)
+shape = SubResource("RectangleShape2D_ft371")
 
 [node name="Label" type="Label" parent="." unique_id=1769814240]
 offset_left = 1952.0
