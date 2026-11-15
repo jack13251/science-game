@@ -11,4 +11,5 @@ description = "Repeating a distillation on already pure water just leads to a lo
 apparatus = "Distillation Stand"
 temperature = "Medium"
 state = "Liquid"
+damage = 1.0
 metadata/_custom_type_script = "uid://c6i3tfnxpbbjv"

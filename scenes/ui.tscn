@@ -28,13 +28,13 @@ as exprected"
 
 [node name="Interaction Prompt" type="Label" parent="CanvasLayer" unique_id=523082224]
 visible = false
-offset_left = 504.0
 offset_top = 576.0
-offset_right = 602.0
+offset_right = 1152.0
 offset_bottom = 600.0
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 22
 text = "PROMPT HERE"
+horizontal_alignment = 1
 
 [node name="Quest prompt" type="VBoxContainer" parent="CanvasLayer" unique_id=12687783]
 offset_left = 864.0

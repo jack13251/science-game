@@ -11,4 +11,5 @@ description = "Water containing chemical and mineral impurities (such as that fr
 apparatus = "Distillation Stand"
 temperature = "Medium"
 state = "Liquid"
+damage = 1.0
 metadata/_custom_type_script = "uid://c6i3tfnxpbbjv"

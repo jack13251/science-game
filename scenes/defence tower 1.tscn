@@ -2,12 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://cuowpfsfbqyr7" path="res://assets/Science_Lab_Tileset/Secret_Underground_Lab/tiles/4x/animated/tesla_coil_idle.png" id="1_0rsxo"]
 [ext_resource type="Script" uid="uid://nv6rf2ejvvye" path="res://scenes/overlap check.gd" id="1_oxla2"]
+[ext_resource type="FontFile" uid="uid://crho4su1mkp4y" path="res://assets/Jersey10-Regular.ttf" id="3_04j5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rsxo"]
 size = Vector2(30, 85)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oxla2"]
 radius = 256.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6p17"]
+size = Vector2(50, 110)
 
 [node name="Sprite2D" type="Node2D" unique_id=850168884]
 script = ExtResource("1_oxla2")
@@ -35,4 +39,69 @@ shape = SubResource("CircleShape2D_oxla2")
 [node name="Cooldown" type="Timer" parent="Node2D" unique_id=2025122386]
 one_shot = true
 
+[node name="Interaction" type="Area2D" parent="Node2D" unique_id=582361600]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Interaction" unique_id=809170009]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_o6p17")
+
+[node name="Control" type="Control" parent="." unique_id=983827379]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=672208163]
+z_index = 2
+layout_mode = 0
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+color = Color(0.52906674, 0.5290667, 0.5290667, 1)
+
+[node name="Label" type="Label" parent="Control/ColorRect" unique_id=1411542791]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_04j5c")
+theme_override_font_sizes/font_size = 21
+text = "Select ammo type:"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/ColorRect" unique_id=1635370874]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 256.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_04j5c")
+theme_override_font_sizes/font_size = 14
+text = "Ammo:"
+
+[node name="OptionButton" type="OptionButton" parent="Control/ColorRect" unique_id=708942814]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 87.0
+offset_right = 192.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_04j5c")
+
+[node name="Button" type="Button" parent="Control/ColorRect" unique_id=1687239486]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 192.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_04j5c")
+theme_override_font_sizes/font_size = 18
+text = "Confirm"
+
 [connection signal="timeout" from="Node2D/Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="body_entered" from="Node2D/Interaction" to="." method="_on_interaction_body_entered"]
+[connection signal="body_exited" from="Node2D/Interaction" to="." method="_on_interaction_body_exited"]
+[connection signal="pressed" from="Control/ColorRect/Button" to="." method="_on_button_pressed"]

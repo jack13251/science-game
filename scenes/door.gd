@@ -12,14 +12,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if near == true:
+		$"../UI/CanvasLayer/Interaction Prompt".text = "Press 'F' to enter the hallway"
+		$"../UI/CanvasLayer/Interaction Prompt".show()
 		if Input.is_action_just_pressed("Interact"):
 			get_tree().change_scene_to_file("res://scenes/tower defence.tscn")
 
 
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	$"../UI/CanvasLayer/Interaction Prompt".text = "Press 'F' to enter the hallway"
-	$"../UI/CanvasLayer/Interaction Prompt".show()
 	near = true
 
 

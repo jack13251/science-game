@@ -15,3 +15,5 @@ class_name ExperimentRecipe
 @export var temperature: String #likely to be just low/med/high CAUTION this is not in the game yet
 
 @export var state: String
+
+@export var damage: float

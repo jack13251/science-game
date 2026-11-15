@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b1tf0i71gv66l" path="res://scenes/enemy path follow.gd" id="3_q5wlh"]
 [ext_resource type="Script" uid="uid://4x2s0613fuw5" path="res://scenes/build.gd" id="6_3rf1k"]
 [ext_resource type="PackedScene" uid="uid://byd0e46bjoi05" path="res://scenes/defence tower 1.tscn" id="7_h136g"]
+[ext_resource type="PackedScene" uid="uid://dvw0gu1aiainp" path="res://scenes/ui.tscn" id="8_ft371"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5wlh"]
 size = Vector2(64, 69)
@@ -113,5 +114,9 @@ text = "HEALTH❤️"
 script = ExtResource("6_3rf1k")
 Buildings = Array[PackedScene]([ExtResource("7_h136g")])
 
+[node name="UI" parent="." unique_id=122003504 instance=ExtResource("8_ft371")]
+
 [connection signal="area_entered" from="Background/Foreground/Door" to="." method="_on_door_area_entered"]
 [connection signal="timeout" from="Path2D/Enemy1" to="Path2D" method="_on_enemy_1_timeout"]
+
+[editable path="UI"]

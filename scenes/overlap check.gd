@@ -1,11 +1,13 @@
 extends Node2D
 
 var valid = true
+var near = false
+var choice: int
 
 #starting tower stats
 @export_category("Stats")
 @export var Cooldown: float = 3
-@export var Damage: float = 3 #NOTE this probably isn't needed once ammo selection is added
+@export var Damage: float = 0 #NOTE starting damage with no recipe selected
 #@export var ammo TODO make ammo selectable in game maybe this doesn't need to be here though
 @export var Type: String = "N/A" #not yet in the game
 @export var Range_multiplier: float = 1
@@ -16,6 +18,8 @@ var timer: Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Control.hide()
+	update()
 	timer = $Node2D/Cooldown
 	timer.one_shot = false
 	timer.wait_time = Cooldown
@@ -26,8 +30,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) ->void:
+	var prompt: Label = get_tree().current_scene.get_node("UI/CanvasLayer/Interaction Prompt")
 	if len($Node2D/Area2D.get_overlapping_areas()) > 0:
 		$".".queue_free()
+	if near == true:
+		prompt.text = "Press 'F' to set ammo type for this building"
+		prompt.show()
+		if Input.is_action_just_pressed("Interact"):
+			$Control.show()
+	else:
+		prompt.hide()
 
  
 func _on_cooldown_timeout() -> void:
@@ -39,5 +51,29 @@ func _on_cooldown_timeout() -> void:
 	var choice: int = randi_range(0, len(targets) - 1)
 	var enemy: PathFollow2D = targets[choice].get_parent().get_parent()
 	print(enemy)
-	enemy.health -= 1
+	enemy.health -= Damage
 	print(enemy.health)
+
+func update() -> void:
+	$Control/ColorRect/OptionButton.clear()
+	$Control/ColorRect/OptionButton.add_separator("Select Input")
+	for i in Discovery.known_l:
+		$Control/ColorRect/OptionButton.add_item(i)
+		print("item added")
+	$Control/ColorRect/OptionButton.select(0)
+
+func _on_interaction_body_entered(body: Node2D) -> void:
+	near = true
+
+
+func _on_interaction_body_exited(body: Node2D) -> void:
+	near = false
+
+
+func _on_button_pressed() -> void:
+	#TODO set damage to damage value of recipe
+	choice = $Control/ColorRect/OptionButton.selected - 1
+	if choice > -1:
+		Damage = RecipeManager.recipes[choice].damage
+	$Control.hide()
+	print(Damage)

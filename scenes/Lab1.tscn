@@ -34,7 +34,7 @@ load_path = "res://.godot/imported/temp lab book patch.png-e2db1d6648775734c3355
 size = Vector2(13.513515, 53.51351)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwgkr"]
-size = Vector2(55, 84)
+size = Vector2(55, 64)
 
 [node name="Node2D" type="Node2D" unique_id=1735809296]
 
@@ -288,7 +288,7 @@ script = ExtResource("10_3oiiy")
 [node name="Area2D" type="Area2D" parent="Door" unique_id=312425436]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D" unique_id=436532657]
-position = Vector2(347, -137)
+position = Vector2(347, -127)
 shape = SubResource("RectangleShape2D_xwgkr")
 
 [node name="UI" parent="." unique_id=122003504 instance=ExtResource("10_v02c1")]
