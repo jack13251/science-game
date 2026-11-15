@@ -1,6 +1,6 @@
 extends PathFollow2D
 
-var health = 100 #starting health of this enemy 
+@export var health: int = 100 #starting health of this enemy 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,4 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$".".progress += 100 * delta
 	if $".".progress_ratio == 1:
+		$".".queue_free()
+	if health <= 0:
 		$".".queue_free()
