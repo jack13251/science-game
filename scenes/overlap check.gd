@@ -1,3 +1,5 @@
+#TODO Change red modulation to playing of animation WARNING this will likely require replacing the sprite 2d with an animated one
+
 extends Node2D
 
 var valid = true
@@ -7,8 +9,7 @@ var choice: int
 #starting tower stats
 @export_category("Stats")
 @export var Cooldown: float = 3
-@export var Damage: float = 0 #NOTE starting damage with no recipe selected
-#@export var ammo TODO make ammo selectable in game maybe this doesn't need to be here though
+@export var Damage: float = 0
 @export var Type: String = "N/A" #not yet in the game
 @export var Range_multiplier: float = 1
 #NOTE maybe add a stat for how many ennemies can be attacked at once (as in per interval of cooldown)
@@ -52,6 +53,9 @@ func _on_cooldown_timeout() -> void:
 	var enemy: PathFollow2D = targets[choice].get_parent().get_parent()
 	print(enemy)
 	enemy.health -= Damage
+	modulate = Color(0.788, 0.0, 0.0, 1.0)
+	await get_tree().process_frame #flashes too fast
+	modulate = Color(1.0, 1.0, 1.0, 1.0)
 	print(enemy.health)
 
 func update() -> void:
