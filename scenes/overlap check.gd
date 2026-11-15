@@ -42,7 +42,6 @@ func _process(delta: float) ->void:
 
  
 func _on_cooldown_timeout() -> void:
-	print("timeout")
 	var targets: Array[Area2D] = $Node2D/Range.get_overlapping_areas()
 	print(targets)
 	if len(targets) == 0:
