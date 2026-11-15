@@ -1,4 +1,4 @@
-terra: WEEK 2/WEEK 3
+terra: WEEK 2/WEEK 3/ WEEK 4
 
 Welcome to Science Game (still totally just a temporary name only). In this game you must conduct 
 experiments using various ingredients and apparatus. As you go you discover more and more things to
@@ -12,7 +12,7 @@ possibilities but first should enter the tower defence area as described below. 
 to save and load the game from the new menus. The current prototype ends after you open the box in the
 second level.
 
-***NEW FEATURE***
+***NEW FEATURE (week 4)***
 After more playing for testing I have come to realise that somwthing may be missing. In an attempt to
 make the gameplay loop more engaging I have added a tower defence system to the game. After completing
 the above the player will then have to interact with the door in their lab to enter the hallway where
@@ -20,6 +20,7 @@ escaped specimens are attempting to breach containment. The player should place 
 and then interact with them to set which of their discovered substances to use as ammo (each has different
 stats USE PURE WATER). The enemies are currently endless so when bored of that the player should use the
 other door in the hallway to return to the lab and upgrade to lab 2.
+
 NOTE: Since there is no mechanic yet to force the player to fight you may upgradr immediatley but doing
 so means you will not be able to fight.
 

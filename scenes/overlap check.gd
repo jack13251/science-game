@@ -39,8 +39,6 @@ func _process(delta: float) ->void:
 		prompt.show()
 		if Input.is_action_just_pressed("Interact"):
 			$Control.show()
-	else:
-		prompt.hide()
 
  
 func _on_cooldown_timeout() -> void:
@@ -55,6 +53,7 @@ func _on_cooldown_timeout() -> void:
 	enemy.health -= Damage
 	modulate = Color(0.788, 0.0, 0.0, 1.0)
 	await get_tree().process_frame #flashes too fast
+	await  get_tree().process_frame
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
 	print(enemy.health)
 
@@ -72,6 +71,8 @@ func _on_interaction_body_entered(body: Node2D) -> void:
 
 func _on_interaction_body_exited(body: Node2D) -> void:
 	near = false
+	var prompt: Label = get_tree().current_scene.get_node("UI/CanvasLayer/Interaction Prompt")
+	prompt.hide()
 
 
 func _on_button_pressed() -> void:
