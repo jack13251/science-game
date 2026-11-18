@@ -1,6 +1,7 @@
 extends PathFollow2D
 
 @export var health: int = 100 #starting health of this enemy 
+@export var reward: int = 1 #currency the player recieves as reward upon killing this enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

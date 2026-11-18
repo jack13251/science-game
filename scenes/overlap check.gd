@@ -54,7 +54,6 @@ func _on_cooldown_timeout() -> void:
 	await get_tree().process_frame #flashes too fast
 	await  get_tree().process_frame
 	modulate = Color(1.0, 1.0, 1.0, 1.0)
-	print(enemy.health)
 
 func update() -> void:
 	$Control/ColorRect/OptionButton.clear()

@@ -4,6 +4,8 @@
 extends Node2D
 
 @export var health = 100 #NOTE a value as high as this (100) should only be used if health persits across rounds and does not reset.
+@export var currency: int = 5 #amount of currency the player starts with in order to place first buildings
+#CAUTION SET THE ABOVE VALUES TO SOMETHING THAT MAKES SENSE FOR THE GAME 
 
 var near = false
 
