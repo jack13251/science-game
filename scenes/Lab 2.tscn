@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://n00lxfs6qd1k"]
 
-[ext_resource type="Script" uid="uid://xuwx20pt3bpq" path="res://scenes/lab manager.gd" id="1_4j4q6"]
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_44h5m"]
 [ext_resource type="Texture2D" uid="uid://cqte624vc4al" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tilesets/research_lab_tileset_4x.png" id="2_ko6x5"]
 [ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scripts/sink.gd" id="3_h02vx"]
@@ -610,7 +609,6 @@ size = Vector2(193.33331, 276.6667)
 size = Vector2(55, 64)
 
 [node name="Node2D" type="Node2D" unique_id=1735809296]
-script = ExtResource("1_4j4q6")
 
 [node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_44h5m")]
 position = Vector2(-434, -285)
@@ -871,10 +869,6 @@ text = "	•Interact with the tap
 [node name="Box" parent="." unique_id=1953658773 instance=ExtResource("11_ko6x5")]
 z_index = 5
 position = Vector2(-136, 45)
-script = null
-
-[node name="Sprite2D" parent="Box" index="0" unique_id=1897799438]
-visible = false
 
 [node name="Area2D" type="Area2D" parent="Box" unique_id=1779468928]
 
