@@ -14,4 +14,8 @@ func _process(delta: float) -> void:
 	if $".".progress_ratio == 1:
 		$".".queue_free()
 	if health <= 0:
+		var parent = $".".get_parent().get_parent()
+		parent.currency += 1
+		var money: Label = get_node("/root/Node2D/CanvasLayer/Money")
+		money.text = "Money: " + str($".".get_parent().get_parent().currency)
 		$".".queue_free()

@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("one"):
 			print("BUILD SELECTION 1")
 			selected_building = Buildings[0].instantiate()
-			$".".add_child(selected_building)
-			var pos = round(($"../CharacterBody2D".global_position + Vector2(559, 243)) / 64) * 64 #- Vector2(32, 0) ALERT to be correct to the tile map grid this offset is needed
-			selected_building.global_position = pos
+			if $"..".currency >= selected_building.cost:
+				$".".add_child(selected_building)
+				var pos = round(($"../CharacterBody2D".global_position + Vector2(559, 243)) / 64) * 64 #- Vector2(32, 0) ALERT to be correct to the tile map grid this offset is needed
+				selected_building.global_position = pos
+				$"..".currency -= selected_building.cost
+				$"../CanvasLayer/Money".text = "Money: " + str($"..".currency)

@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://n00lxfs6qd1k"]
 
+[ext_resource type="Script" uid="uid://xuwx20pt3bpq" path="res://scenes/lab manager.gd" id="1_4j4q6"]
 [ext_resource type="PackedScene" uid="uid://dwyvnsp4jievp" path="res://scenes/Player.tscn" id="1_44h5m"]
 [ext_resource type="Texture2D" uid="uid://cqte624vc4al" path="res://assets/Science_Lab_Tileset/University_Research_Lab/tilesets/research_lab_tileset_4x.png" id="2_ko6x5"]
 [ext_resource type="Script" uid="uid://cd478xjdf7p8v" path="res://scripts/sink.gd" id="3_h02vx"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bi1rp85lwsgef" path="res://assets/pixel-art-monitor-computer-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" id="9_m01sr"]
 [ext_resource type="PackedScene" uid="uid://dvw0gu1aiainp" path="res://scenes/ui.tscn" id="10_llty0"]
 [ext_resource type="PackedScene" uid="uid://ch31yncaeo3r1" path="res://scenes/box.tscn" id="11_ko6x5"]
+[ext_resource type="Script" uid="uid://b6sfm843y603x" path="res://scenes/door.gd" id="12_h02vx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5im6"]
 texture = ExtResource("2_ko6x5")
@@ -567,18 +569,14 @@ texture_region_size = Vector2i(64, 64)
 8:14/animation_frame_2/duration = 1.0
 8:14/animation_frame_3/duration = 1.0
 8:14/0 = 0
-8:46/size_in_atlas = Vector2i(1, 2)
-8:46/animation_frame_0/duration = 1.0
-8:46/animation_frame_1/duration = 1.0
-8:46/animation_frame_2/duration = 1.0
-8:46/animation_frame_3/duration = 1.0
-8:46/0 = 0
 0:46/size_in_atlas = Vector2i(2, 2)
 0:46/animation_frame_0/duration = 1.0
 0:46/animation_frame_1/duration = 1.0
 0:46/animation_frame_2/duration = 1.0
 0:46/animation_frame_3/duration = 1.0
 0:46/0 = 0
+8:47/0 = 0
+8:46/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ntw1d"]
 tile_size = Vector2i(64, 64)
@@ -608,7 +606,11 @@ size = Vector2(13.513515, 53.51351)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ko6x5"]
 size = Vector2(193.33331, 276.6667)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j4q6"]
+size = Vector2(55, 64)
+
 [node name="Node2D" type="Node2D" unique_id=1735809296]
+script = ExtResource("1_4j4q6")
 
 [node name="CharacterBody2D" parent="." unique_id=846455820 instance=ExtResource("1_44h5m")]
 position = Vector2(-434, -285)
@@ -620,17 +622,17 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=485993993]
-tile_map_data = PackedByteArray("AAD///3/AQAFAAQAAAABAP3/AQAFAAQAAAACAP3/AQAFAAQAAAADAP3/AQAFAAQAAAAEAP3/AQAEAAQAAAD///z/AQACAAIAAAAAAPz/AQAEAAIAAAABAPz/AQAEAAIAAAACAPz/AQACAAIAAAADAPz/AQACAAIAAAAEAPz/AQACAAIAAAAAAP3/AQAFAAQAAAD///v/AQAOAAIAAAAAAPv/AQAPAAIAAAABAPv/AQANAAIAAAACAPv/AQAOAAIAAAADAPv/AQANAAIAAAAEAPv/AQANAAIAAAD+//v/AQANAAIAAAD+//z/AQAEAAIAAAD+//3/AQAFAAQAAAD+//7/AQAFAAUAAAD+////AQAFAAUAAAD+/wAAAQAFAAUAAAD///7/AQAEAAUAAAAAAP7/AQADAAUAAAABAP7/AQAEAAUAAAABAP//AQAEAAUAAAACAP//AQAEAAUAAAADAP//AQADAAUAAAAEAP//AQAFAAUAAAAEAAAAAQADAAUAAAACAP7/AQADAAUAAAADAP7/AQADAAUAAAAEAP7/AQADAAUAAAADAAAAAQAEAAUAAAACAAAAAQAFAAUAAAABAAAAAQAFAAUAAAAAAAAAAQAEAAUAAAD//wAAAQAEAAUAAAD/////AQAFAAUAAAAAAP//AQAFAAUAAAAFAPv/AQAOAAIAAAAFAPz/AQAPAAIAAAAFAP3/AQAOAAIAAAAFAP7/AQAOAAIAAAAFAP//AQAOAAIAAAAFAAAAAQAOAAIAAAD+/wEAAQAEAAUAAAD//wEAAQAEAAUAAAAAAAEAAQAEAAUAAAABAAEAAQAEAAUAAAACAAEAAQAEAAUAAAADAAEAAQAEAAUAAAAEAAEAAQAEAAUAAAAFAAEAAQAPAAIAAAD9//v/AQAOAAIAAAD9//z/AQAEAAIAAAD9//3/AQAFAAQAAAD9/wEAAQAEAAUAAAD8//3/AQAFAAQAAAD8//z/AQAEAAIAAAD9//7/AQAEAAUAAAD8//7/AQAFAAUAAAD8////AQADAAUAAAD8/wAAAQADAAUAAAD9/wAAAQADAAUAAAD9////AQAEAAUAAAD8/wEAAQAEAAUAAAD8//v/AQABAAIAAAAFAAIAAQAAAAIAAAAEAAIAAQAAAAIAAAADAAIAAQABAAIAAAACAAIAAQABAAIAAAABAAIAAQABAAIAAAAAAAIAAQAAAAIAAAD//wIAAQAAAAIAAAD+/wIAAQAAAAIAAAD9/wIAAQABAAIAAAD8/wIAAQAAAAIAAAD7/wIAAQABAAIAAAD7/wEAAQABAAIAAAD7/wAAAQABAAIAAAD7////AQAAAAIAAAD7//7/AQABAAIAAAD7//3/AQABAAIAAAD7//z/AQABAAIAAAD7//v/AQABAAIAAAA=")
+tile_map_data = PackedByteArray("AAD///3/AQAFAAQAAAABAP3/AQAFAAQAAAACAP3/AQAFAAQAAAADAP3/AQAFAAQAAAAEAP3/AQAEAAQAAAD///z/AQACAAIAAAAAAPz/AQAEAAIAAAABAPz/AQAEAAIAAAACAPz/AQACAAIAAAADAPz/AQACAAIAAAAEAPz/AQACAAIAAAAAAP3/AQAFAAQAAAD///v/AQAOAAIAAAAAAPv/AQAPAAIAAAABAPv/AQANAAIAAAACAPv/AQAOAAIAAAADAPv/AQANAAIAAAAEAPv/AQANAAIAAAD+//v/AQANAAIAAAD+//z/AQAEAAIAAAD+//3/AQAFAAQAAAD+//7/AQAFAAUAAAD+////AQAFAAUAAAD+/wAAAQAFAAUAAAD///7/AQAEAAUAAAAAAP7/AQADAAUAAAABAP7/AQAEAAUAAAABAP//AQAEAAUAAAACAP//AQAEAAUAAAADAP//AQADAAUAAAAEAP//AQAFAAUAAAAEAAAAAQADAAUAAAACAP7/AQADAAUAAAADAP7/AQADAAUAAAAEAP7/AQADAAUAAAADAAAAAQAEAAUAAAACAAAAAQAFAAUAAAABAAAAAQAFAAUAAAAAAAAAAQAEAAUAAAD//wAAAQAEAAUAAAD/////AQAFAAUAAAAAAP//AQAFAAUAAAAFAPv/AQAOAAIAAAAFAPz/AQAEAAIAAAAFAP3/AQAFAAQAAAAFAP7/AQADAAUAAAAFAP//AQAEAAUAAAAFAAAAAQAFAAUAAAD+/wEAAQAEAAUAAAD//wEAAQAEAAUAAAAAAAEAAQAEAAUAAAABAAEAAQAEAAUAAAACAAEAAQAEAAUAAAADAAEAAQAEAAUAAAAEAAEAAQAEAAUAAAAFAAEAAQADAAUAAAD9//v/AQAOAAIAAAD9//z/AQAEAAIAAAD9//3/AQAFAAQAAAD9/wEAAQAEAAUAAAD8//3/AQAFAAQAAAD8//z/AQAEAAIAAAD9//7/AQAEAAUAAAD8//7/AQAFAAUAAAD8////AQADAAUAAAD8/wAAAQADAAUAAAD9/wAAAQADAAUAAAD9////AQAEAAUAAAD8/wEAAQAEAAUAAAD8//v/AQABAAIAAAAFAAIAAQAAAAIAAAAEAAIAAQAAAAIAAAADAAIAAQABAAIAAAACAAIAAQABAAIAAAABAAIAAQABAAIAAAAAAAIAAQAAAAIAAAD//wIAAQAAAAIAAAD+/wIAAQAAAAIAAAD9/wIAAQABAAIAAAD8/wIAAQAAAAIAAAD7/wIAAQABAAIAAAD7/wEAAQABAAIAAAD7/wAAAQABAAIAAAD7////AQAAAAIAAAD7//7/AQABAAIAAAD7//3/AQABAAIAAAD7//z/AQABAAIAAAD7//v/AQABAAIAAAAGAAIAAQAAAAIAAAAGAAEAAQAAAAIAAAAGAAAAAQAAAAIAAAAGAP//AQAAAAIAAAAGAP7/AQAAAAIAAAAGAP3/AQAAAAIAAAAGAPz/AQAAAAIAAAAGAPv/AQAAAAIAAAA=")
 tile_set = SubResource("TileSet_ntw1d")
 
 [node name="Furniture" type="TileMapLayer" parent="Background" unique_id=1184668823]
-tile_map_data = PackedByteArray("AAD///3/AQAAACUAAAACAP3/AQABABAAAAADAP3/AQAIAA4AAAD///z/AQAAADEAAAAAAPz/AQABADEAAAACAPz/AQAEADIAAAADAPz/AQAFADIAAAD+//3/AQAAACMAAAD+//7/AQAAACQAAAACAP7/AQABABEAAAADAP7/AQAIAA8AAAD/////AQAAACcAAAD///7/AQAAACYAAAA=")
+tile_map_data = PackedByteArray("AAD///3/AQAAACUAAAACAP3/AQABABAAAAADAP3/AQAIAA4AAAD///z/AQAAADEAAAAAAPz/AQABADEAAAACAPz/AQAEADIAAAADAPz/AQAFADIAAAD+//3/AQAAACMAAAD+//7/AQAAACQAAAACAP7/AQABABEAAAADAP7/AQAIAA8AAAD/////AQAAACcAAAD///7/AQAAACYAAAAFAPz/AQAIAC4AAAAFAP3/AQAIAC8AAAA=")
 tile_set = SubResource("TileSet_ntw1d")
 
 [node name="World Borders" type="StaticBody2D" parent="." unique_id=2128009735]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World Borders" unique_id=770375888]
-position = Vector2(320, -64)
+position = Vector2(384, -54)
 shape = SubResource("WorldBoundaryShape2D_qjypl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="World Borders" unique_id=166447373]
@@ -638,7 +640,7 @@ position = Vector2(122, 125)
 shape = SubResource("WorldBoundaryShape2D_eketx")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="World Borders" unique_id=67818361]
-position = Vector2(128, -256)
+position = Vector2(103, -301)
 shape = SubResource("WorldBoundaryShape2D_0hoth")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="World Borders" unique_id=967769134]
@@ -866,15 +868,28 @@ theme_override_fonts/font = ExtResource("7_tkb1p")
 text = "	•Interact with the tap
 	•Discover 1 new substance"
 
-[node name="Node2D" parent="." unique_id=1953658773 instance=ExtResource("11_ko6x5")]
+[node name="Box" parent="." unique_id=1953658773 instance=ExtResource("11_ko6x5")]
 z_index = 5
 position = Vector2(-136, 45)
+script = null
 
-[node name="Area2D" type="Area2D" parent="Node2D" unique_id=1779468928]
+[node name="Sprite2D" parent="Box" index="0" unique_id=1897799438]
+visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" unique_id=1573270927]
+[node name="Area2D" type="Area2D" parent="Box" unique_id=1779468928]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box/Area2D" unique_id=1573270927]
 position = Vector2(3.333313, 1.6666412)
 shape = SubResource("RectangleShape2D_ko6x5")
+
+[node name="Door" type="Node2D" parent="." unique_id=2362511]
+script = ExtResource("12_h02vx")
+
+[node name="Area2D" type="Area2D" parent="Door" unique_id=1755807957]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D" unique_id=2094815218]
+position = Vector2(347, -127)
+shape = SubResource("RectangleShape2D_4j4q6")
 
 [connection signal="body_entered" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sink/Area2D" to="Sink" method="_on_area_2d_body_exited"]
@@ -884,9 +899,14 @@ shape = SubResource("RectangleShape2D_ko6x5")
 [connection signal="pressed" from="Distillation/Temporary/VBoxContainer/Button" to="Distillation" method="_on_button_pressed"]
 [connection signal="body_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_body_exited"]
-[connection signal="pressed" from="UI/CanvasLayer/Box opened popup/Button" to="Node2D" method="_on_button_pressed"]
-[connection signal="body_entered" from="Node2D/Area2D" to="Node2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Node2D/Area2D" to="Node2D" method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="UI/CanvasLayer/Box opened popup/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="UI/CanvasLayer/Box opened popup/Button" to="Box" method="_on_button_pressed"]
+[connection signal="body_entered" from="Box/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Box/Area2D" to="Box" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Box/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Box/Area2D" to="Box" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Door/Area2D" to="Door" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Door/Area2D" to="Door" method="_on_area_2d_body_exited"]
 
 [editable path="UI"]
-[editable path="Node2D"]
+[editable path="Box"]

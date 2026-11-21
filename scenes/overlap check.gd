@@ -12,6 +12,7 @@ var choice: int
 @export var Damage: float = 0
 @export var Type: String = "N/A" #not yet in the game
 @export var Range_multiplier: float = 1
+@export var cost: int = 1 #starting currency price of the tower when placed. NOTE should be refunded when deleted.
 #NOTE maybe add a stat for how many ennemies can be attacked at once (as in per interval of cooldown)
 
 var timer: Timer

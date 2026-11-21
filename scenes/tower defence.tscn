@@ -173,6 +173,15 @@ theme_override_font_sizes/font_size = 10
 text = "(Place using
 num keys)"
 
+[node name="Money" type="Label" parent="CanvasLayer" unique_id=1851705464]
+offset_left = 8.0
+offset_top = 123.0
+offset_right = 67.0
+offset_bottom = 146.0
+theme_override_fonts/font = ExtResource("10_uoaom")
+theme_override_font_sizes/font_size = 21
+text = "MONEY"
+
 [node name="Door" type="Node2D" parent="." unique_id=89041102]
 
 [node name="Area2D" type="Area2D" parent="Door" unique_id=1142396834]

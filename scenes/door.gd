@@ -3,6 +3,8 @@
 extends Node2D
 
 var near = false
+#NOTE there is no need for a lab variable as questmanager.level can be used in its place
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
