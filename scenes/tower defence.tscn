@@ -92,6 +92,7 @@ position = Vector2(384, 320)
 curve = SubResource("Curve2D_pirgh")
 script = ExtResource("3_q5wlh")
 enemy_scene = ExtResource("3_fcvi8")
+enemies = 5
 
 [node name="Enemy1" type="Timer" parent="Path2D" unique_id=339613849]
 autostart = true

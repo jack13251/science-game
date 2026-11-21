@@ -7,23 +7,16 @@ var box
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	box = get_tree().current_scene.get_node("Box")
-	print(box)
-	print("LAB LEVEL", QuestManager.current_level)
 	if opened == true:
-		pass # replace with
+		pass # replace with queue_free on box once box isn't null
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print("LAB LEVEL", QuestManager.current_level)
 	if QuestManager.current_level == 1:
-		#box = get_tree().current_scene.get_node("Box") #BUG box is a null value
-		box = $Box
-		box = $Box/Sprite2D
-		print("LEVEL 1")
+#		box = get_tree().current_scene.get_node("/root/Lab 2/Node2D/Box") #BUG box is a null value therefore does not show correctly or work
 		if opened == false:
-			print("SHOWING")
+#BUG box does not show as it returns null
 			box.show()
 			if near == true:
 				print("NEAR")
