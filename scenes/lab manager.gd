@@ -14,10 +14,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if QuestManager.current_level == 1:
-#		box = get_tree().current_scene.get_node("/root/Lab 2/Node2D/Box") #BUG box is a null value therefore does not show correctly or work
+#		box = get_tree().current_scene.get_node("/root/Node2D/Box") #BUG box is a null value therefore does not show correctly or work
 		if opened == false:
 #BUG box does not show as it returns null
-			box.show()
+			box.show() #\,asfkhafjb;svjhdvdxbvj\b;bdhhfv\hvf;fjabjbsdjdfbjbfjsbfjdbfkjbg -How this makes me feel right about now
 			if near == true:
 				print("NEAR")
 				$"UI/CanvasLayer/Interaction Prompt".text = "Press 'F' to open the box"

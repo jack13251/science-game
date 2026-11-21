@@ -9,6 +9,9 @@ var spawned: int = 0 #number of enemies spwaned in this round
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if QuestManager.current_level == 1:
+		interval = 3
+		enemies += enemies
 	$Enemy1.wait_time = interval
 
 
@@ -24,3 +27,4 @@ func _on_enemy_1_timeout() -> void:
 		spawned += 1
 	else:
 		print("WAVE WON") #TODO change this to show the player theu have won the wave
+		#TODO also add a way to wait for the wave won screen until the lalst enemy reaches the end or dies so that the game won doesn't appear too early

@@ -28,7 +28,7 @@ QuestManager="*uid://b2w3kibi8mdl3"
 MenuManager="*uid://eysi7guoxanh"
 SettingsMenu="*uid://f6qkdlgufjsh"
 SaveManager="*uid://c70e7gocb26by"
-LabManager="*uid://xuwx20pt3bpq"
+LabManager="uid://xuwx20pt3bpq"
 
 [display]
 
