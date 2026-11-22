@@ -13,6 +13,7 @@ var near = false
 func _ready() -> void:
 	$"Label".text = "❤️ " + str(health)
 	$CanvasLayer/Money.text = "Money: " + str(currency)
+	$"UI/CanvasLayer/Quest prompt".hide() #NOTE this means quests aren't a thing in this scene which may need changing
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

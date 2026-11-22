@@ -124,6 +124,9 @@ Buildings = Array[PackedScene]([ExtResource("7_h136g")])
 
 [node name="UI" parent="." unique_id=122003504 instance=ExtResource("8_ft371")]
 
+[node name="Quest prompt" parent="UI/CanvasLayer" parent_id_path=PackedInt32Array(122003504, 64283522) index="2" unique_id=12687783]
+visible = false
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1313132530]
 
 [node name="Build options" type="Control" parent="CanvasLayer" unique_id=293293331]
@@ -182,6 +185,30 @@ offset_bottom = 146.0
 theme_override_fonts/font = ExtResource("10_uoaom")
 theme_override_font_sizes/font_size = 21
 text = "MONEY"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=702047151]
+z_index = 500
+offset_top = 10.0
+offset_right = 1152.0
+offset_bottom = 62.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer" unique_id=2125598924]
+layout_mode = 2
+
+[node name="Wave" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=267297941]
+z_index = 100
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_uoaom")
+theme_override_font_sizes/font_size = 25
+text = "Wave 1"
+horizontal_alignment = 1
+
+[node name="Enemies" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=643333925]
+z_index = 100
+layout_mode = 2
+theme_override_fonts/font = ExtResource("10_uoaom")
+theme_override_font_sizes/font_size = 18
+text = "Enemies defeated: xx/XX"
 
 [node name="Door" type="Node2D" parent="." unique_id=89041102]
 

@@ -1,6 +1,7 @@
 #CAUTION this script doesn't do anything right now as it doesn't work and therefore has been removed from
 #the scene. It is meant to handle the box logic but persist between the player leaving and entering the scene.
 #either fix or delete. There is definitley an easier way to do this anyway.
+#NOTE select all lines and use toggle comment to reactive this script
 
 #extends Node2D
 #
@@ -12,7 +13,7 @@
 ## Called when the node enters the scene tree for the first time.
 #func _ready() -> void:
 	#if opened == true:
-		#pass # replace with queue_free on box once box isn't null
+		#pass # NOTE replace with box.queue_free once box isn't null
 #
 #
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
